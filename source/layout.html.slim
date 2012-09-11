@@ -1,0 +1,39 @@
+doctype 5
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    title = data.page.title || "Startaê"
+    == stylesheet_link_tag 'all', media: 'all'
+
+  body
+    #header
+      h1 Blog
+    / == partial 'layouts/nav'
+
+    #main
+      == yield
+    aside
+      h2 Recent Articles
+      ol
+        - blog.articles[0...10].each do |article|
+          li
+            a href="#{article.url}"
+              == article.title
+            span
+              == article.date.strftime('%b %e')
+
+      h2 Tags
+      ol
+        - blog.tags.each do |tag, articles|
+          li
+            a href="#{tag_path tag}" #{tag} (#{articles.size})
+
+      h2 By Year
+      ol
+        - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+          li
+            a href="#{blog_year_path year}" #{year} #{articles.size}
+
+    / == partial 'layouts/footer'
+    == javascript_include_tag  "all"
