@@ -8,6 +8,7 @@ gem "tzinfo", "~> 0.3.33"
 # For feed.xml.builder
 gem "builder", "~> 3.0.0"
 
+gem "thin"
 gem "slim"
 gem "sass", "~> 3.2.1"
 gem "compass", "~> 0.13.alpha.0"
