@@ -1,0 +1,18 @@
+header#header-page role="banner"
+
+  #header-page-inner
+
+    - if request.fullpath == root_path
+      .logo-page Startaê
+    - else
+      .logo-page
+        a href="#{root_path}" title="Startaê" Startaê
+
+    nav.nav-page role="navigation"
+      ul
+        li
+          a href="/projetos" Projetos<span> Que ajudamos a tirar do papel.</span>
+        li
+          a href="/time" O Time<span> Olá, prazer!</span>
+        li
+          a href="http://blog.startae.com.br" Blog<span> Nossos pensamentos</span>

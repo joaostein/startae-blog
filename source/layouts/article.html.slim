@@ -1,5 +1,5 @@
 doctype 5
-html
+html lang="pt-br"
   head
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
@@ -7,10 +7,10 @@ html
     == stylesheet_link_tag 'all', media: 'all'
 
   body
-    #header
+    header#page-header
       p
         a href="/" Startaê Blog
-    / == partial 'layouts/nav'
+    == partial 'layouts/header'
 
     #main
       h1 == data.page.title
@@ -38,6 +38,6 @@ html
           li
             a href="#{blog_year_path year}" #{year} #{articles.size}
 
-    / == partial 'layouts/footer'
+    == partial 'layouts/footer'
     == javascript_include_tag  "all"
-  == partial "/layouts/google_analytics"
+    == partial "layouts/google_analytics"
