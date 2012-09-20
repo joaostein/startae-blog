@@ -44,12 +44,9 @@ body.section-blog
     +pre(1)
 
     aside
-      +margin-leader(1)
-      &:fisrt-of-type
-        +margin-leader(0)
-
+      +pie-clearfix
       h2
-        +adjust-font-size-to(18px)
+        +adjust-font-size-to(20px)
         +adjust-leading-to(1)
         +sans-serif("Source Sans Pro")
         font-weight: 600
@@ -61,7 +58,7 @@ body.section-blog
         +margin-leader(1)
 
         li
-          +adjust-font-size-to(18px)
+          +adjust-font-size-to(17px)
           +adjust-leading-to(1)
           +sans-serif("Source Sans Pro")
           font-weight: 400
@@ -76,3 +73,23 @@ body.section-blog
           a
             color: $black
             display: block
+
+    aside#categories
+      +padding-leader(2)
+      ol
+        li
+          +inline-list
+          +adjust-font-size-to(17px)
+          +adjust-leading-to(1)
+
+          a
+            background-color: $purple
+            +border-radius(4px)
+            padding: 6px
+            color: $white
+            +inline-block
+            margin: 0 4px 4px 0
+
+            &:hover
+              text-decoration: none
+              background-color: darken($purple, 15%)
