@@ -1,0 +1,104 @@
+// ---------------------------------------------------------------------------------/
+//  BASE IMPORTS
+// ---------------------------------------------------------------------------------/
+
+
+// COMPASS MODULES
+// --------------------------------------------------
+@import "compass/reset"
+@import "compass/typography/"
+@import "compass/utilities/"
+@import "compass/utilities/sprites"
+@import "compass/css3"
+
+
+// COMPASS PLUGINS
+// --------------------------------------------------
+@import "susy"
+//@import "animate"
+
+
+// OTHER GLOBAL FILES
+// --------------------------------------------------
+@import "variables"
+@import "functions"
+@import "mixins"
+@import "sprites"
+@import "media-queries"
+
+@import "print"
+@import "ie"
+
+
+
+// ---------------------------------------------------------------------------------
+//  DEFAULT STYLES
+// ---------------------------------------------------------------------------------
+
+html
+  +improve-text-rendering
+  overflow-y: scroll
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  text-size-adjust: 100%
+
+
+
+// ACTIVATE THE VERTICAL RHYTHM
+// --------------------------------------------------
++establish-baseline
+
+
+
+// FONT-FACES
+// --------------------------------------------------
+// Add a custom font-face with Compass
+// +font-face("Example-Font", font-files("webfonts/ss-standard.woff", woff, "webfonts/ss-standard.ttf", truetype, "webfonts/ss-standard.svg", svg), "webfonts/ss-standard.eot")
+
+
+
+// Text Selection
+// --------------------------------------------------
+::selection
+  background: $text-selection-background
+  color: $text-selection-color
+
+
+
+// BOX-SIZING BORDER-BOX DEFAULT 
+// http://paulirish.com/2012/box-sizing-border-box-ftw/
+// --------------------------------------------------
+
+//Using box sizing border box with susy grid: https://github.com/ericam/susy/issues/29#issuecomment-6911654
+// Susy box sizing correction
++border-box-sizing
+
+*
+  +box-sizing(border-box)
+  
+// .container
+//   +box-sizing(content-box)
+
+// input, textarea, select, button
+//   +box-sizing(border-box)
+
+
+
+// FORMS
+// --------------------------------------------------
+input, textarea, select, button
+  outline: none
+  
+// Remove the webkit glow 
+*:focus
+  outline: none
+
+
+  
+b
+  font-weight: bold
+  
+// CLASSES
+// --------------------------------------------------
+.text-strike
+  text-decoration: line-through

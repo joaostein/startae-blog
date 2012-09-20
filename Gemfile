@@ -1,8 +1,8 @@
 source :rubygems
 
-gem "middleman", "~> 3.0.2"
+gem "middleman", "~> 3.0.4"
 gem "middleman-blog", "~> 3.1.0"
-gem "middleman-livereload", :github => "middleman/middleman-livereload"
+# gem "middleman-livereload", :github => "middleman/middleman-livereload"
 # For Time.zone
 gem "tzinfo", "~> 0.3.33"
 # For feed.xml.builder

@@ -1,0 +1,78 @@
+#footer-page-inner
+  +container
+
+#footer-page
+  +sans-serif("Source Sans Pro")
+  font-weight: 200
+  +adjust-font-size-to(22px)
+    
+  #footer-page-inner
+    +margin-leader(2)
+    +padding-leader(1)
+    +padding-trailer(1)
+    +box-shadow(rgba(#000, .1) 0 -1px 0)
+
+
+  // SOCIAL LINKS
+  // ------------------------------------
+  .social-links
+    +span-columns(5 omega,16)
+    +pie-clearfix
+    text-align: right
+
+    ul
+      +inline-list
+      +float-right
+
+      li
+        display: block
+        text-align: right
+
+        &:last-child
+          margin-right: 0 !important
+
+    a
+      color: #e19a30
+      &:hover
+      &:active
+        +effect-click-down
+
+
+  // CONTACT INFO
+  // ------------------------------------
+  .contact-info
+    +span-columns(11,16)
+    address
+      +span-columns(6,11)
+      color: #6649b8
+      span[itemprop="name"]
+        +hidden
+      span[itemprop="street-address"]
+        display: block
+      span[itemprop="tel"]
+        +hidden
+      a[itemprop="url"]
+        +hidden
+      a
+        color: #6649b8
+
+    .contact
+      +span-columns(5 omega,11)
+      color: #fd4775
+      text-align: center
+      a
+        color: #fd4775
+
+
+  // COPYRIGHT
+  // ------------------------------------
+  .copyright
+    +margin-leader(4)
+    +margin-trailer(1)
+    +span-columns(16,16)
+    +adjust-font-size-to(14px)
+    +adjust-leading-to(1)
+    text-align: center
+    color: #888
+    &:hover
+      color: #000

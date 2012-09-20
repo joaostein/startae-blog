@@ -1,0 +1,700 @@
+// @font-face
+//   font-family: "SSStandard"
+//   src: url('ss-standard.eot')
+//   src: url('ss-standard.eot?#iefix') format("embedded-opentype"), url('ss-standard.woff') format("woff"), url('ss-standard.ttf') format("truetype"), url('ss-standard.svg#SSStandard') format("svg")
+//   font-weight: normal
+//   font-style: normal
+
++font-face("SSStandard", font-files("webfonts/ss-standard/ss-standard.woff", woff, "webfonts/ss-standard/ss-standard.ttf", truetype, "webfonts/ss-standard/ss-standard.svg#SSStandard", svg), "webfonts/ss-standard/ss-standard.eot?#iefix", normal, normal)
+
+.ss-icon
+  font-family: "SSStandard"
+  font-style: normal
+  font-weight: normal
+  text-decoration: none
+  text-rendering: optimizeLegibility
+  white-space: nowrap
+  -webkit-font-feature-settings: "liga"
+  -moz-font-feature-settings: "liga=1"
+  -moz-font-feature-settings: "liga"
+  -ms-font-feature-settings: "liga" 1
+  -o-font-feature-settings: "liga"
+  font-feature-settings: "liga"
+  -webkit-font-smoothing: antialiased
+  &.ss-standard
+    font-family: "SSStandard"
+    font-style: normal
+    font-weight: normal
+    text-decoration: none
+    text-rendering: optimizeLegibility
+    white-space: nowrap
+    -webkit-font-feature-settings: "liga"
+    -moz-font-feature-settings: "liga=1"
+    -moz-font-feature-settings: "liga"
+    -ms-font-feature-settings: "liga" 1
+    -o-font-feature-settings: "liga"
+    font-feature-settings: "liga"
+    -webkit-font-smoothing: antialiased
+
+[class^="ss-"]:before, [class*=" ss-"]:before, [class^="ss-"].ss-standard:before, [class*=" ss-"].ss-standard:before, [class^="ss-"].right:after, [class*=" ss-"].right:after, [class^="ss-"].ss-standard.right:after, [class*=" ss-"].ss-standard.right:after
+  font-family: "SSStandard"
+  font-style: normal
+  font-weight: normal
+  text-decoration: none
+  text-rendering: optimizeLegibility
+  white-space: nowrap
+  -webkit-font-feature-settings: "liga"
+  -moz-font-feature-settings: "liga=1"
+  -moz-font-feature-settings: "liga"
+  -ms-font-feature-settings: "liga" 1
+  -o-font-feature-settings: "liga"
+  font-feature-settings: "liga"
+  -webkit-font-smoothing: antialiased
+
+[class^="ss-"].right:before, [class*=" ss-"].ss-standard.right:before
+  display: none
+  content: ''
+
+.ss-cursor
+  &:before, &.right:after
+    content: ''
+
+.ss-crosshair
+  &:before, &.right:after
+    content: '⌖'
+
+.ss-search
+  &:before, &.right:after
+    content: ''
+
+.ss-zoomin
+  &:before, &.right:after
+    content: ''
+
+.ss-zoomout
+  &:before, &.right:after
+    content: ''
+
+.ss-view
+  &:before, &.right:after
+    content: ''
+
+.ss-attach
+  &:before, &.right:after
+    content: ''
+
+.ss-link
+  &:before, &.right:after
+    content: ''
+
+.ss-move
+  &:before, &.right:after
+    content: ''
+
+.ss-write
+  &:before, &.right:after
+    content: '✎'
+
+.ss-writingdisabled
+  &:before, &.right:after
+    content: ''
+
+.ss-erase
+  &:before, &.right:after
+    content: '✐'
+
+.ss-compose
+  &:before, &.right:after
+    content: ''
+
+.ss-lock
+  &:before, &.right:after
+    content: ''
+
+.ss-unlock
+  &:before, &.right:after
+    content: ''
+
+.ss-key
+  &:before, &.right:after
+    content: ''
+
+.ss-backspace
+  &:before, &.right:after
+    content: '⌫'
+
+.ss-ban
+  &:before, &.right:after
+    content: ''
+
+.ss-trash
+  &:before, &.right:after
+    content: ''
+
+.ss-target
+  &:before, &.right:after
+    content: '◎'
+
+.ss-tag
+  &:before, &.right:after
+    content: ''
+
+.ss-bookmark
+  &:before, &.right:after
+    content: ''
+
+.ss-flag
+  &:before, &.right:after
+    content: '⚑'
+
+.ss-like
+  &:before, &.right:after
+    content: ''
+
+.ss-dislike
+  &:before, &.right:after
+    content: ''
+
+.ss-heart
+  &:before, &.right:after
+    content: '♥'
+
+.ss-halfheart
+  &:before, &.right:after
+    content: ''
+
+.ss-star
+  &:before, &.right:after
+    content: '⋆'
+
+.ss-halfstar
+  &:before, &.right:after
+    content: ''
+
+.ss-sample
+  &:before, &.right:after
+    content: ''
+
+.ss-crop
+  &:before, &.right:after
+    content: ''
+
+.ss-layers
+  &:before, &.right:after
+    content: ''
+
+.ss-phone
+  &:before, &.right:after
+    content: ''
+
+.ss-phonedisabled
+  &:before, &.right:after
+    content: ''
+
+.ss-rss
+  &:before, &.right:after
+    content: ''
+
+.ss-facetime
+  &:before, &.right:after
+    content: ''
+
+.ss-reply
+  &:before, &.right:after
+    content: '↩'
+
+.ss-send
+  &:before, &.right:after
+    content: ''
+
+.ss-mail
+  &:before, &.right:after
+    content: '✉'
+
+.ss-inbox
+  &:before, &.right:after
+    content: ''
+
+.ss-chat
+  &:before, &.right:after
+    content: ''
+
+.ss-user
+  &:before, &.right:after
+    content: ''
+
+.ss-femaleuser
+  &:before, &.right:after
+    content: ''
+
+.ss-users
+  &:before, &.right:after
+    content: ''
+
+.ss-cart
+  &:before, &.right:after
+    content: ''
+
+.ss-creditcard
+  &:before, &.right:after
+    content: ''
+
+.ss-dollarsign
+  &:before, &.right:after
+    content: ''
+
+.ss-barchart
+  &:before, &.right:after
+    content: ''
+
+.ss-piechart
+  &:before, &.right:after
+    content: ''
+
+.ss-box
+  &:before, &.right:after
+    content: ''
+
+.ss-home
+  &:before, &.right:after
+    content: '⌂'
+
+.ss-globe
+  &:before, &.right:after
+    content: ''
+
+.ss-navigate
+  &:before, &.right:after
+    content: ''
+
+.ss-compass
+  &:before, &.right:after
+    content: ''
+
+.ss-signpost
+  &:before, &.right:after
+    content: ''
+
+.ss-map
+  &:before, &.right:after
+    content: ''
+
+.ss-location
+  &:before, &.right:after
+    content: ''
+
+.ss-pin
+  &:before, &.right:after
+    content: ''
+
+.ss-database
+  &:before, &.right:after
+    content: ''
+
+.ss-hdd
+  &:before, &.right:after
+    content: ''
+
+.ss-music
+  &:before, &.right:after
+    content: '♫'
+
+.ss-mic
+  &:before, &.right:after
+    content: ''
+
+.ss-volume
+  &:before, &.right:after
+    content: ''
+
+.ss-volumelow
+  &:before, &.right:after
+    content: ''
+
+.ss-volumehigh
+  &:before, &.right:after
+    content: ''
+
+.ss-airplay
+  &:before, &.right:after
+    content: ''
+
+.ss-camera
+  &:before, &.right:after
+    content: ''
+
+.ss-picture
+  &:before, &.right:after
+    content: ''
+
+.ss-video
+  &:before, &.right:after
+    content: ''
+
+.ss-play
+  &:before, &.right:after
+    content: '▶'
+
+.ss-pause
+  &:before, &.right:after
+    content: ''
+
+.ss-stop
+  &:before, &.right:after
+    content: '■'
+
+.ss-record
+  &:before, &.right:after
+    content: '●'
+
+.ss-rewind
+  &:before, &.right:after
+    content: '⏪'
+
+.ss-fastforward
+  &:before, &.right:after
+    content: '⏩'
+
+.ss-skipback
+  &:before, &.right:after
+    content: '⏮'
+
+.ss-skipforward
+  &:before, &.right:after
+    content: '⏭'
+
+.ss-eject
+  &:before, &.right:after
+    content: '⏏'
+
+.ss-repeat
+  &:before, &.right:after
+    content: ''
+
+.ss-replay
+  &:before, &.right:after
+    content: '↺'
+
+.ss-shuffle
+  &:before, &.right:after
+    content: ''
+
+.ss-book
+  &:before, &.right:after
+    content: ''
+
+.ss-openbook
+  &:before, &.right:after
+    content: ''
+
+.ss-notebook
+  &:before, &.right:after
+    content: ''
+
+.ss-grid
+  &:before, &.right:after
+    content: ''
+
+.ss-rows
+  &:before, &.right:after
+    content: ''
+
+.ss-columns
+  &:before, &.right:after
+    content: ''
+
+.ss-thumbnails
+  &:before, &.right:after
+    content: ''
+
+.ss-desktop
+  &:before, &.right:after
+    content: ''
+
+.ss-laptop
+  &:before, &.right:after
+    content: ''
+
+.ss-tablet
+  &:before, &.right:after
+    content: ''
+
+.ss-cell
+  &:before, &.right:after
+    content: ''
+
+.ss-battery
+  &:before, &.right:after
+    content: ''
+
+.ss-batteryhigh
+  &:before, &.right:after
+    content: ''
+
+.ss-batterymedium
+  &:before, &.right:after
+    content: ''
+
+.ss-batterylow
+  &:before, &.right:after
+    content: ''
+
+.ss-batteryempty
+  &:before, &.right:after
+    content: ''
+
+.ss-clouddownload
+  &:before, &.right:after
+    content: ''
+
+.ss-download
+  &:before, &.right:after
+    content: ''
+
+.ss-cloudupload
+  &:before, &.right:after
+    content: ''
+
+.ss-upload
+  &:before, &.right:after
+    content: ''
+
+.ss-fork
+  &:before, &.right:after
+    content: ''
+
+.ss-merge
+  &:before, &.right:after
+    content: ''
+
+.ss-refresh
+  &:before, &.right:after
+    content: '↻'
+
+.ss-sync
+  &:before, &.right:after
+    content: ''
+
+.ss-loading
+  &:before, &.right:after
+    content: ''
+
+.ss-wifi
+  &:before, &.right:after
+    content: ''
+
+.ss-connection
+  &:before, &.right:after
+    content: ''
+
+.ss-file
+  &:before, &.right:after
+    content: ''
+
+.ss-folder
+  &:before, &.right:after
+    content: ''
+
+.ss-quote
+  &:before, &.right:after
+    content: '“'
+
+.ss-text
+  &:before, &.right:after
+    content: ''
+
+.ss-font
+  &:before, &.right:after
+    content: ''
+
+.ss-print
+  &:before, &.right:after
+    content: '⎙'
+
+.ss-fax
+  &:before, &.right:after
+    content: ''
+
+.ss-list
+  &:before, &.right:after
+    content: ''
+
+.ss-layout
+  &:before, &.right:after
+    content: ''
+
+.ss-action
+  &:before, &.right:after
+    content: ''
+
+.ss-redirect
+  &:before, &.right:after
+    content: '↪'
+
+.ss-expand
+  &:before, &.right:after
+    content: '⤢'
+
+.ss-contract
+  &:before, &.right:after
+    content: ''
+
+.ss-help
+  &:before, &.right:after
+    content: '❓'
+
+.ss-info
+  &:before, &.right:after
+    content: 'ℹ'
+
+.ss-alert
+  &:before, &.right:after
+    content: '⚠'
+
+.ss-caution
+  &:before, &.right:after
+    content: '⛔'
+
+.ss-logout
+  &:before, &.right:after
+    content: ''
+
+.ss-plus
+  &:before, &.right:after
+    content: '+'
+
+.ss-hyphen
+  &:before, &.right:after
+    content: '-'
+
+.ss-check
+  &:before, &.right:after
+    content: '✓'
+
+.ss-delete
+  &:before, &.right:after
+    content: '␡'
+
+.ss-settings
+  &:before, &.right:after
+    content: '⚙'
+
+.ss-dashboard
+  &:before, &.right:after
+    content: ''
+
+.ss-notifications
+  &:before, &.right:after
+    content: ''
+
+.ss-notificationsdisabled
+  &:before, &.right:after
+    content: ''
+
+.ss-clock
+  &:before, &.right:after
+    content: '⏲'
+
+.ss-stopwatch
+  &:before, &.right:after
+    content: '⏱'
+
+.ss-calendar
+  &:before, &.right:after
+    content: ''
+
+.ss-calendaradd
+  &:before, &.right:after
+    content: ''
+
+.ss-calendarremove
+  &:before, &.right:after
+    content: ''
+
+.ss-calendarcheck
+  &:before, &.right:after
+    content: ''
+
+.ss-calendardelete
+  &:before, &.right:after
+    content: ''
+
+.ss-briefcase
+  &:before, &.right:after
+    content: ''
+
+.ss-cloud
+  &:before, &.right:after
+    content: '☁'
+
+.ss-droplet
+  &:before, &.right:after
+    content: ''
+
+.ss-up
+  &:before, &.right:after
+    content: '⬆'
+
+.ss-upright
+  &:before, &.right:after
+    content: '⬈'
+
+.ss-right
+  &:before, &.right:after
+    content: '➡'
+
+.ss-downright
+  &:before, &.right:after
+    content: '⬊'
+
+.ss-down
+  &:before, &.right:after
+    content: '⬇'
+
+.ss-downleft
+  &:before, &.right:after
+    content: '⬋'
+
+.ss-left
+  &:before, &.right:after
+    content: '⬅'
+
+.ss-upleft
+  &:before, &.right:after
+    content: '⬉'
+
+.ss-navigateup
+  &:before, &.right:after
+    content: ''
+
+.ss-navigateright
+  &:before, &.right:after
+    content: '▻'
+
+.ss-navigatedown
+  &:before, &.right:after
+    content: ''
+
+.ss-navigateleft
+  &:before, &.right:after
+    content: '◅'
+
+.ss-directup
+  &:before, &.right:after
+    content: '▴'
+
+.ss-directright
+  &:before, &.right:after
+    content: '▹'
+
+.ss-dropdown
+  &:before, &.right:after
+    content: '▾'
+
+.ss-directleft
+  &:before, &.right:after
+    content: '◃'
+
+.ss-retweet
+  &:before, &.right:after
+    content: ''

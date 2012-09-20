@@ -1,0 +1,173 @@
+// @font-face
+//   font-family: "SSSocial"
+//   src: url('ss-social-circle.eot')
+//   src: url('ss-social-circle.eot?#iefix') format("embedded-opentype"), url('ss-social-circle.woff') format("woff"), url('ss-social-circle.ttf') format("truetype"), url('ss-social-circle.svg#SSSocialCircle') format("svg")
+//   font-weight: bold
+//   font-style: normal
+// 
+// 
+// @font-face
+//   font-family: "SSSocial"
+//   src: url('ss-social-regular.eot')
+//   src: url('ss-social-regular.eot?#iefix') format("embedded-opentype"), url('ss-social-regular.woff') format("woff"), url('ss-social-regular.ttf') format("truetype"), url('ss-social-regular.svg#SSSocialRegular') format("svg")
+//   font-weight: normal
+//   font-style: normal
+
++font-face("SSSocial", font-files("webfonts/ss-social/ss-social-circle.woff", woff, "webfonts/ss-social/ss-social-circle.ttf", truetype, "webfonts/ss-social/ss-social-circle.svg#SSSocialCircle", svg), "webfonts/ss-social/ss-social-circle.eot?#iefix", bold, normal)
++font-face("SSSocial", font-files("webfonts/ss-social/ss-social-regular.woff", woff, "webfonts/ss-social/ss-social-regular.ttf", truetype, "webfonts/ss-social/ss-social-regular.svg#SSSocialRegular", svg), "webfonts/ss-social/ss-social-regular.eot?#iefix", normal, normal)
+
+.ss-icon
+  font-family: "SSSocial"
+  font-style: normal
+  font-weight: normal
+  text-decoration: none
+  text-rendering: optimizeLegibility
+  white-space: nowrap
+  -webkit-font-feature-settings: "liga"
+  -moz-font-feature-settings: "liga=1"
+  -moz-font-feature-settings: "liga"
+  -ms-font-feature-settings: "liga" 1
+  -o-font-feature-settings: "liga"
+  font-feature-settings: "liga"
+  -webkit-font-smoothing: antialiased
+  &.ss-social, &.ss-social-circle
+    font-family: "SSSocial"
+    font-style: normal
+    font-weight: normal
+    text-decoration: none
+    text-rendering: optimizeLegibility
+    white-space: nowrap
+    -webkit-font-feature-settings: "liga"
+    -moz-font-feature-settings: "liga=1"
+    -moz-font-feature-settings: "liga"
+    -ms-font-feature-settings: "liga" 1
+    -o-font-feature-settings: "liga"
+    font-feature-settings: "liga"
+    -webkit-font-smoothing: antialiased
+
+[class^="ss-"]:before, [class*=" ss-"]:before, [class^="ss-"][class*=" ss-social"]:before, [class*=" ss-"][class*=" ss-social"]:before, [class^="ss-"].right:after, [class*=" ss-"].right:after, [class^="ss-"][class*=" ss-social"].right:after, [class*=" ss-"][class*=" ss-social"].right:after
+  font-family: "SSSocial"
+  font-style: normal
+  font-weight: normal
+  text-decoration: none
+  text-rendering: optimizeLegibility
+  white-space: nowrap
+  -webkit-font-feature-settings: "liga"
+  -moz-font-feature-settings: "liga=1"
+  -moz-font-feature-settings: "liga"
+  -ms-font-feature-settings: "liga" 1
+  -o-font-feature-settings: "liga"
+  font-feature-settings: "liga"
+  -webkit-font-smoothing: antialiased
+
+.ss-icon.ss-social-circle, [class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before, [class^="ss-"].ss-social-circle.right:after, [class*=" ss-"].ss-social-circle.right:after
+  font-weight: bold
+
+[class^="ss-"]
+  &.right:before, &[class*=" ss-social"].right:before
+    display: none
+    content: ''
+
+.ss-facebook
+  &:before, &.right:after
+    content: ''
+
+.ss-twitter
+  &:before, &.right:after
+    content: ''
+
+.ss-linkedin
+  &:before, &.right:after
+    content: ''
+
+.ss-googleplus
+  &:before, &.right:after
+    content: ''
+
+.ss-tumblr
+  &:before, &.right:after
+    content: ''
+
+.ss-wordpress
+  &:before, &.right:after
+    content: ''
+
+.ss-blogger
+  &:before, &.right:after
+    content: ''
+
+.ss-posterous
+  &:before, &.right:after
+    content: ''
+
+.ss-youtube
+  &:before, &.right:after
+    content: ''
+
+.ss-vimeo
+  &:before, &.right:after
+    content: ''
+
+.ss-flickr
+  &:before, &.right:after
+    content: ''
+
+.ss-instagram
+  &:before, &.right:after
+    content: ''
+
+.ss-pinterest
+  &:before, &.right:after
+    content: ''
+
+.ss-dribbble
+  &:before, &.right:after
+    content: ''
+
+.ss-behance
+  &:before, &.right:after
+    content: ''
+
+.ss-github
+  &:before, &.right:after
+    content: ''
+
+.ss-octocat
+  &:before, &.right:after
+    content: ''
+
+.ss-paypal
+  &:before, &.right:after
+    content: ''
+
+.ss-foursquare
+  &:before, &.right:after
+    content: ''
+
+.ss-skype
+  &:before, &.right:after
+    content: ''
+
+.ss-rdio
+  &:before, &.right:after
+    content: ''
+
+.ss-spotify
+  &:before, &.right:after
+    content: ''
+
+.ss-lastfm
+  &:before, &.right:after
+    content: ''
+
+.ss-mail
+  &:before, &.right:after
+    content: '✉'
+
+.ss-like
+  &:before, &.right:after
+    content: ''
+
+.ss-rss
+  &:before, &.right:after
+    content: ''

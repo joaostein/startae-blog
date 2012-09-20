@@ -1,0 +1,419 @@
+.section-home section#page-headline
+  background: transparent url("team.png") no-repeat 50% 0
+  height: 600px
+  +padding-leader(9)
+
+  #page-headline-inner
+    background-color: rgba($pink, .97)
+    color: $white
+    text-align: center
+    +padding-leader(3)
+    +padding-trailer(3)
+
+  #page-headline-container
+    +container
+
+  h1
+    +adjust-font-size-to(48px)
+    +adjust-leading-to(2)
+    +sans-serif("Source Sans Pro")
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: -.05em
+
+  p
+    +adjust-font-size-to(22px)
+    +adjust-leading-to(1.4)
+    +sans-serif("Enriqueta")
+    font-weight: 400
+    +span-columns(16,16)
+    +prefix(1)
+    +suffix(1)
+    +padding-leader(1)
+
+    b
+      color: darken($pink, 45%)
+      font-weight: 400
+
+section.service
+
+  &.mvp
+    +container
+    
+    header
+
+      h1
+        +adjust-font-size-to(48px)
+        +adjust-leading-to(2)
+        +sans-serif("Source Sans Pro")
+        font-weight: 200
+        letter-spacing: -.05em
+        text-align: center
+
+        b
+          font-weight: 400
+
+
+    // Processo passo a passo
+    .process
+      +pie-clearfix
+      +margin-leader(2)
+
+      p
+        +sans-serif("Enriqueta")
+        +adjust-font-size-to(18px)
+        +adjust-leading-to(1)
+        font-weight: 400
+        +span-columns(16,16)
+        +prefix(1)
+        +suffix(1)
+        +padding-leader(2)
+
+      ul
+        margin: 0
+        padding: 0
+        +margin-leader(2)
+        +adjust-font-size-to(16px)
+        +adjust-leading-to(1)
+        +sans-serif("Source Sans Pro")
+        font-weight: 700
+        letter-spacing: -.05em
+        text-align: center
+        color: $gray
+        text-transform: uppercase
+
+        li
+          +border-radius(4px)
+          background-clip: padding-box
+          background-color: $white
+          +box-shadow(0 1px 1px rgba(#000, .1))
+          +padding-leader(1)
+          +padding-trailer(1)
+          position: relative
+
+          .icon
+            width: 80px
+            height: 80px
+            margin-left: auto
+            margin-right: auto
+            +background-size(80px 80px)
+            +margin-trailer(1)
+
+          &.box-idea, &.box-team, &.box-work, &.box-value
+            +span-columns(3,16)
+            
+            &:after
+              content: ""
+              position: absolute
+              top: 0
+              right: 0
+              width: 45px
+              height: 45px
+              margin: 0
+
+
+          &.box-idea
+            .icon
+              background-image: url("icon-idea@2x.png")
+
+          &.box-team
+            .icon
+              background-image: url("icon-team@2x.png")
+
+          &.box-work
+            .icon
+              background-image: url("icon-work@2x.png")
+
+          &.box-value
+            .icon
+              background-image: url("icon-value@2x.png")
+
+          &.box-result
+            +span-columns(4 omega,16)
+
+            .icon
+              background-image: url("icon-result@2x.png")
+
+
+
+    //TIMELINE - How it works
+    .how-it-works
+      +pie-clearfix
+      +margin-leader(1)
+
+      h2
+        color: $black
+        +adjust-font-size-to(20px)
+        +adjust-leading-to(1)
+        +sans-serif("Source Sans Pro")
+        font-weight: 400
+        text-align: center
+        text-transform: uppercase
+        +box-shadow(0 1px 0 $gray-light)
+        +margin-trailer(1)
+
+        span
+          +inline-block
+          background-color: $gray-lighter
+          +adjust-leading-to(2)
+          position: relative
+          bottom: -1em
+          padding: 0 .5em
+
+
+      .timeline
+        +pie-clearfix
+        +margin-leader(2)
+        background: transparent url("timeline-line-bg.png") repeat-y 50% 0
+        +padding-trailer(10)
+
+
+        .timeline-inner
+          width: 100px
+          margin: 0 auto
+          position: relative
+
+
+
+          .and-after
+            background-color: $gray-lighter
+            position: absolute
+            width: 580px
+            left: 50%
+            margin-left: -290px
+
+            p
+              +sans-serif("Enriqueta")
+              +adjust-font-size-to(16px)
+              +adjust-leading-to(1)
+              font-weight: 400
+              +margin-leader(.5)
+              +margin-trailer(.5)
+
+            h3
+              background: $gray-lighter url("timeline-dotted-line-bg.png") repeat-y 50% 6px
+              +padding-leader(5)
+              color: $black
+              +adjust-font-size-to(20px)
+              +adjust-leading-to(1)
+              +sans-serif("Source Sans Pro")
+              font-weight: 400
+              text-align: center
+              text-transform: uppercase
+
+              span
+                background-color: $gray-lighter
+                padding-top: 4px
+
+
+
+          //Styles for days block
+          .day
+
+            .timeline-mark
+              width: 20px
+              height: 20px
+              overflow: hidden
+              +border-radius(20px)
+              background: $pink
+              margin: 0 auto
+              +margin-leader(4)
+              +box-shadow(inset 0 1px 0 rgba(#000, .1), 0 0 0 5px $gray-lighter)
+
+            &.step-1
+              .timeline-mark
+                background: $pink
+
+              article
+                top: 135px
+                left: -360px
+                header
+                  color: $pink
+
+            &.step-2
+              .timeline-mark
+                background: $yellow
+
+              article
+                top: 235px
+                left: 120px
+                header
+                  color: $yellow
+
+            &.step-3
+              .timeline-mark
+                background: $blue
+
+              article
+                top: 537px
+                left: -360px
+                header
+                  color: $blue
+
+            article
+              width: 340px
+              position: absolute
+              +border-radius(4px)
+              background-clip: padding-box
+              background-color: #fff
+              +box-shadow(0 1px 1px rgba(0,0,0,.1))
+              padding: 20px
+              
+              .details
+                position: relative
+
+                &.arrow-to-right
+                  &:after, &:before
+                    left: 320px
+                    border: solid transparent
+                    content: ""
+                    height: 0
+                    width: 0
+                    position: absolute
+                    pointer-events: none
+
+                  &:after
+                    border-color: rgba(0, 0, 213, 0)
+                    border-left-color: $white
+                    border-width: 15px
+                    top: 15px
+                    margin-top: -15px
+
+                  &:before
+                    border-color: rgba(0, 0, 213, 0)
+                    border-left-color: rgba(#000, .05)
+                    border-width: 16px
+                    top: 15px
+                    margin-top: -16px
+
+                &.arrow-to-left
+                  &:after, &:before
+                    right: 320px
+                    border: solid transparent
+                    content: ""
+                    height: 0
+                    width: 0
+                    position: absolute
+                    pointer-events: none
+
+                  &:after
+                    border-color: rgba(0, 0, 213, 0)
+                    border-right-color: $white
+                    border-width: 15px
+                    top: 15px
+                    margin-top: -15px
+
+                  &:before
+                    border-color: rgba(0, 0, 213, 0)
+                    border-right-color: rgba(#000, .05)
+                    border-width: 16px
+                    top: 15px
+                    margin-top: -16px
+
+
+              header
+                +adjust-font-size-to(28px)
+                +adjust-leading-to(1)
+                +sans-serif("Source Sans Pro")
+                font-weight: 700
+                letter-spacing: -.05em
+                text-transform: uppercase
+
+              .description
+                +sans-serif("Enriqueta")
+                +adjust-font-size-to(16px)
+                +adjust-leading-to(1)
+                font-weight: 400
+                
+                p
+                  +padding-leader(1)
+
+              
+              
+
+
+
+          //Style of headliner
+          .headline
+            &:before
+              content: ''
+              display: inline-block
+              height: 100%
+              vertical-align: middle
+
+            h3
+              +inline-block
+              vertical-align: middle
+              width: 70px
+
+            &.circle
+              word-wrap: break-word
+              width: 80px
+              height: 80px
+              overflow: hidden
+              +border-radius(60px)
+              color: $white
+              +adjust-font-size-to(18px)
+              +adjust-leading-to(.8)
+              +sans-serif("Source Sans Pro")
+              font-weight: 400
+              letter-spacing: -.05em
+              text-align: center
+              text-transform: uppercase
+              margin: 0 auto 0 auto
+              +box-shadow(inset 0 1px 0 rgba(#000, .1), 0 0 0 5px $gray-lighter)
+
+              &.sua-ideia
+                background-color: $pink
+
+              &.sua-ideia-online
+                +margin-leader(3)
+                background-color: $blue
+                width: 96px
+                height: 96px
+                h3
+                  margin-top: -5px
+
+
+section.call-to-action
+  +margin-leader(4)
+
+  .container
+    +container
+
+
+  a
+    color: $gray-dark
+    text-decoration: underline
+
+    &:hover
+      text-decoration: none
+      color: $black
+
+
+  header
+    +span-columns(11,16)
+
+    h1
+      +adjust-font-size-to(32px)
+      +adjust-leading-to(2)
+      +sans-serif("Source Sans Pro")
+      font-weight: 400
+      letter-spacing: -.05em
+      text-transform: uppercase
+      +margin-leader(.5)
+      +margin-trailer(.5)
+
+      b
+        font-weight: 700
+
+  .actions
+    +span-columns(5 omega,16)
+    text-align: center
+
+    .button
+      text-decoration: none
+
+    .link
+      display: block
+      +padding-leader(1)

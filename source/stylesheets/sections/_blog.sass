@@ -1,0 +1,18 @@
+body.section-blog
+  +adjust-font-size-to(18px)
+  +adjust-leading-to(1)
+  +sans-serif("Enriqueta")
+  font-weight: 400
+
+  section.container
+    +container
+
+  #main
+    +span-columns(9 omega,16)
+    +post(1)
+    +debug
+
+  aside
+    +span-columns(4,16)
+    +pre(1)
+    +debug

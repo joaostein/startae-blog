@@ -1,0 +1,63 @@
+.section-projects section#page-headline
+  background-color: rgba($blue, .97)
+  color: $white
+  text-align: center
+  +padding-leader(3)
+  +margin-trailer(2)
+  +padding-trailer(3)
+  +clearfix
+  
+  #page-headline-container
+    +container
+
+  h1
+    +adjust-font-size-to(48px)
+    +adjust-leading-to(2)
+    +sans-serif("Source Sans Pro")
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: -.05em
+
+  p
+    +adjust-font-size-to(22px)
+    +adjust-leading-to(1.4)
+    +sans-serif("Enriqueta")
+    font-weight: 400
+    +span-columns(16,16)
+    +prefix(1)
+    +suffix(1)
+    +padding-leader(1)
+
+    b
+      color: darken($black, 45%)
+      font-weight: 400
+
+section.projects
+  +container
+
+  li:nth-of-type(odd)
+    +span-columns(8 alpha,16)
+    
+  li:nth-of-type(even)
+    +span-columns(8 omega,16)
+  
+  li
+    +padding-trailer(2)
+  
+  a
+    display: block
+    
+    &:hover
+      text-decoration: none
+  
+  h2
+    +sans-serif("Source Sans Pro")
+    text-transform: uppercase
+    color: $pink
+    font-size: 16px
+
+  p
+    +sans-serif("Enriqueta")
+    font-size: 16px
+    color: $gray
+
