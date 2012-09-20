@@ -6,13 +6,24 @@ body.section-blog
 
   section.container
     +container
+    +padding-leader(2)
 
   #main
     +span-columns(9 omega,16)
     +post(1)
-    +debug
+
+    h1
+      +adjust-font-size-to(30px)
+      +adjust-leading-to(1.5)
+      +sans-serif("Source Sans Pro")
+      font-weight: 600
+      letter-spacing: -.05em
+      color: $black
+      a
+        color: $black
+        text-decoration: none
+
 
   aside
     +span-columns(4,16)
     +pre(1)
-    +debug

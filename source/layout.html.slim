@@ -7,12 +7,10 @@ html lang="pt-br"
     == stylesheet_link_tag 'application.css.sass', media: 'all'
 
   body.section-blog
-    / header#page-header
-    /   p
-    /     a href="/" Startaê Blog
     == partial 'layouts/header'
 
     section.container
+
       #main
         h1 == data.page.title
         == yield
