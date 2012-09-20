@@ -19,11 +19,56 @@ body.section-blog
       font-weight: 600
       letter-spacing: -.05em
       color: $black
+
       a
         color: $black
         text-decoration: none
 
+    h2
+      +adjust-font-size-to(22px)
+      +adjust-leading-to(1.2)
+      +sans-serif("Enriqueta")
+      font-weight: 700
+      +margin-leader(2)
 
-  aside
+    p
+      +margin-leader(1.5)
+      +adjust-leading-to(1.2)
+      color: #444
+    
+    b
+      font-weight: 700
+
+  #secondary
     +span-columns(4,16)
     +pre(1)
+
+    aside
+      +margin-leader(1)
+      &:fisrt-of-type
+        +margin-leader(0)
+
+      h2
+        +adjust-font-size-to(18px)
+        +adjust-leading-to(1)
+        +sans-serif("Source Sans Pro")
+        font-weight: 600
+        letter-spacing: -.05em
+        color: $black
+        text-transform: uppercase
+    
+      ol
+        +margin-leader(1)
+        li
+          +adjust-font-size-to(18px)
+          +adjust-leading-to(1)
+          +sans-serif("Source Sans Pro")
+          font-weight: 400
+          +margin-leader(1)
+
+          &:fisrt-of-type
+            +margin-leader(0)
+
+          a
+            color: $black
+            display: block

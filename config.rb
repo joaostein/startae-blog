@@ -35,7 +35,7 @@ page "/feed.xml", :layout => false
 
 # Susy grids in Compass
 # First: gem install susy
-# require 'susy'
+require 'susy'
 
 # Change Compass configuration
 # compass_config do |config|
@@ -79,9 +79,7 @@ page "/feed.xml", :layout => false
 # end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration
