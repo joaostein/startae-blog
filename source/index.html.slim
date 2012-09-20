@@ -10,13 +10,12 @@ per_page: 10
       a href="#{@article}"
         == article.title
 
-    div
-      / time.entry-date(datetime="2012-03-28T15:47:37+00:00" pubdate)
-      time.entry-date(datetime="#{article.date.strftime('%Y-%m-%dT%T+00:00')}" pubdate)
-        == article.date.strftime('%b %e %Y')
+  .entry-meta
+    time.entry-date(datetime="#{article.date.strftime('%Y-%m-%dT%T+00:00')}" pubdate)
+      == article.date.strftime('%b %e %Y')
 
   article
-    p
+    .entry-content
       == article.summary
 
 

@@ -12,8 +12,13 @@ html lang="pt-br"
     section.container
 
       #main
-        h1 == data.page.title
-        == yield
+
+        article
+          header
+            h1 == data.page.title
+
+          .entry-content
+            == yield
 
       == partial 'layouts/sidebar'
 
