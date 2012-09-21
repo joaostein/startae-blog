@@ -1,50 +1,68 @@
-.float-image
-  +pie-clearfix
-
-  img
-    margin-top: 0 !important
-
-  &.left
-    img
-      +float-left
-      padding: 0 10px 10px 0
-
-  &.right
-    img
-      +float-right
-      padding: 0 0 10px 10px
-
-body.section-home
-  #main
-    article
-      position: relative
-      border-bottom: 1px solid rgba(#000, .1)
-      +margin-leader(3)
-      +padding-trailer(3)
-
-      &:first-of-type
-        +margin-leader(0)
-      
-      .entry-meta
-        position: absolute
-        top: 0
-        right: -88px
-        color: #999
-        +adjust-font-size-to(13px)
-        +adjust-leading-to(1)
-        width: 80px
-        
-        a
-          color: #999
-        
-
-
-
 body.page-blog
   +adjust-font-size-to(18px)
   +adjust-leading-to(1)
   +sans-serif("Enriqueta")
   font-weight: 400
+
+
+
+  &.section-article
+    #main
+      +span-columns(10,16)
+      +pre(3)
+      +padding-trailer(2)
+      
+      .entry-content
+        border-bottom: 1px solid rgba(#000, .1)
+        +padding-trailer(3)
+
+    #secondary
+      +span-columns(10,16)
+      +pre(3)
+      +padding-trailer(2)
+
+      #recent-posts
+        +span-columns(10,10)
+
+      #categories
+        display: none
+
+
+
+
+  &.section-home
+
+    #secondary
+      +padding-leader(2)
+      +span-columns(4,16)
+      +pre(1)
+
+    #main
+      +span-columns(9 omega,16)
+      +post(1)
+      +padding-trailer(2)
+
+      article
+        position: relative
+        border-bottom: 1px solid rgba(#000, .1)
+        +margin-leader(3)
+        +padding-trailer(3)
+
+        &:first-of-type
+          +margin-leader(0)
+      
+        .entry-meta
+          position: absolute
+          top: 0
+          right: -88px
+          color: #999
+          +adjust-font-size-to(13px)
+          +adjust-leading-to(1)
+          width: 80px
+
+          a
+            color: #999
+
 
   article
     .entry-content
@@ -61,21 +79,34 @@ body.page-blog
         color: $purple
         font-weight: 700
         text-decoration: none
+
         &:hover
           color: $white
           background-color: $purple
 
-  video, audio, iframe, img
-    +margin-leader(1)
+      .float-image
+        +pie-clearfix
+
+        img
+          margin-top: 0 !important
+
+        &.left
+          img
+            +float-left
+            padding: 0 10px 10px 0
+
+        &.right
+          img
+            +float-right
+            padding: 0 0 10px 10px
+
+
+      video, audio, iframe, img
+        +margin-leader(1)
 
   section.container
     +container
     +padding-leader(2)
-
-  #main
-    +span-columns(9 omega,16)
-    +post(1)
-    +padding-trailer(2)
 
     h1
       +adjust-font-size-to(34px)
@@ -109,11 +140,10 @@ body.page-blog
       font-weight: 700
 
   #secondary
-    +span-columns(4,16)
-    +pre(1)
 
     aside
       +pie-clearfix
+
       h2
         +adjust-font-size-to(20px)
         +adjust-leading-to(1)
@@ -148,7 +178,6 @@ body.page-blog
               color: $purple
 
     aside#categories
-      +padding-leader(2)
       ol
         li
           +inline-list

@@ -1,2 +1,2 @@
-startae-blog
+Startaê Blog powered by Middleman
 ============
