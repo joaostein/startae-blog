@@ -7,7 +7,7 @@ html lang="pt-br"
     == stylesheet_link_tag 'application.css.sass', media: 'all'
 
   body.page-blog.section-home
-    == partial 'layouts/header'
+    == partial "layouts/header"
 
     section.container
 
@@ -15,9 +15,9 @@ html lang="pt-br"
 
         == yield
 
-      == partial 'layouts/sidebar'
+      == partial "layouts/sidebar"
 
 
-    == partial 'layouts/footer'
+    == partial "layouts/footer"
     / == javascript_include_tag  "all"
     == partial "layouts/google_analytics"

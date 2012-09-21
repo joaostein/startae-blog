@@ -1,6 +1,18 @@
-// TEMP
-nav.nav-page
-  display: none
+.float-image
+  +pie-clearfix
+
+  img
+    margin-top: 0 !important
+
+  &.left
+    img
+      +float-left
+      padding: 0 10px 10px 0
+
+  &.right
+    img
+      +float-right
+      padding: 0 0 10px 10px
 
 body.section-home
   #main
