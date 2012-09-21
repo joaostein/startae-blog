@@ -16,6 +16,7 @@ body.page-blog
         text-align: center
 
         ul
+          +opacity(0)
           padding-top: 5px
 
           li
@@ -108,10 +109,13 @@ body.page-blog
         +adjust-leading-to(1.5)
         // text-align: justify
 
-
       .share
         +pie-clearfix
         +margin-leader(2)
+
+        iframe
+          border: none
+          +box-shadow(none)
 
         .facebook
           padding-left: 20px
@@ -193,7 +197,7 @@ body.page-blog
         border-bottom: 1px solid rgba(#000, .1)
         +margin-leader(3)
         +padding-trailer(3)
-
+        
         &:first-of-type
           +margin-leader(0)
       
@@ -253,7 +257,13 @@ body.page-blog
 
       video, audio, iframe, img
         +margin-leader(1)
-      
+        border: 4px solid $white
+        +border-radius(3px)
+        +box-shadow(rgba($black, .3) 0 0 5px)
+
+      .fluid-image
+        img
+          width: 100%
 
 
         
