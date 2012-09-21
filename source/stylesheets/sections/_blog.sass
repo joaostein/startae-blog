@@ -1,8 +1,57 @@
-body.section-blog
+// TEMP
+nav.nav-page
+  display: none
+
+body.section-home
+  #main
+    article
+      position: relative
+      border-bottom: 1px solid rgba(#000, .1)
+      +margin-leader(3)
+      +padding-trailer(3)
+
+      &:first-of-type
+        +margin-leader(0)
+      
+      .entry-meta
+        position: absolute
+        top: 0
+        right: -88px
+        color: #999
+        +adjust-font-size-to(13px)
+        +adjust-leading-to(1)
+        width: 80px
+        
+
+
+
+body.page-blog
   +adjust-font-size-to(18px)
   +adjust-leading-to(1)
   +sans-serif("Enriqueta")
   font-weight: 400
+
+  article
+    .entry-content
+
+      ul
+        +margin-leader(1)
+        li
+          list-style-type: square
+          margin-left: 1.2em
+          +margin-leader(.5)
+          +margin-trailer(.5)
+
+      a
+        color: $purple
+        font-weight: 700
+        text-decoration: none
+        &:hover
+          color: $white
+          background-color: $purple
+
+  video, audio, iframe, img
+    +margin-leader(1)
 
   section.container
     +container
@@ -11,10 +60,11 @@ body.section-blog
   #main
     +span-columns(9 omega,16)
     +post(1)
+    +padding-trailer(2)
 
     h1
-      +adjust-font-size-to(30px)
-      +adjust-leading-to(1.5)
+      +adjust-font-size-to(34px)
+      +adjust-leading-to(1.7)
       +sans-serif("Source Sans Pro")
       font-weight: 600
       letter-spacing: -.05em
@@ -23,6 +73,8 @@ body.section-blog
       a
         color: $black
         text-decoration: none
+        background-color: transparent
+        font-weight: 600
 
     h2
       +adjust-font-size-to(22px)
@@ -67,12 +119,16 @@ body.section-blog
           &:fisrt-of-type
             +margin-leader(0)
 
-          time
-            +hidden
-
           a
             color: $black
             display: block
+            position: relative
+
+            time
+              display: none
+
+            &:hover
+              color: $purple
 
     aside#categories
       +padding-leader(2)

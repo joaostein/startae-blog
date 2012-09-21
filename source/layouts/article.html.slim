@@ -3,7 +3,7 @@ html lang="pt-br"
   head
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
-    title == data.page.title || "Startaê"
+    title == data.page.title "- Blog Startaê" || "Blog Startaê"
     == stylesheet_link_tag 'application.css.sass', media: 'all'
 
   body.section-blog
@@ -13,23 +13,16 @@ html lang="pt-br"
 
       #main
 
-        header
-          h1 == data.page.title
-
-        .entry-meta
-          time.entry-date(datetime="#{article.date.strftime('%Y-%m-%dT%T+00:00')}" pubdate)
-            == article.date.strftime('%b %e %Y')
-
         article
-          .entry-content
-            == yield
+          header
+            h1 == data.page.title
 
-        
-        
+          .entry-content
+            == yield 
 
       == partial 'layouts/sidebar'
 
 
     == partial 'layouts/footer'
-    == javascript_include_tag  "all"
+    / == javascript_include_tag  "all"
     == partial "layouts/google_analytics"

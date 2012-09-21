@@ -13,7 +13,7 @@ activate :blog do |blog|
   blog.permalink = ":year/:month/:title.html"
   blog.sources = ":year-:month-:day-:title.html"
   blog.taglink = "categoria/:tag.html"
-  # blog.layout = "article"
+  blog.layout = "article"
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
   blog.year_link = ":year.html"
@@ -85,10 +85,10 @@ set :images_dir, 'images'
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
   
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
   
   # Enable cache buster
   # activate :cache_buster
