@@ -6,19 +6,15 @@ html lang="pt-br"
     title == data.page.title "- Blog Startaê" || "Blog Startaê"
     == stylesheet_link_tag 'application.css.sass', media: 'all'
 
-  body.section-blog
+
+  body.page-blog
     == partial 'layouts/header'
 
     section.container
 
       #main
-
-        article
-          header
-            h1 == data.page.title
-
-          .entry-content
-            == yield 
+        h1 == data.page.title
+        == yield
 
       == partial 'layouts/sidebar'
 

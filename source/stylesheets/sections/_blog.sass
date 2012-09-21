@@ -22,6 +22,9 @@ body.section-home
         +adjust-leading-to(1)
         width: 80px
         
+        a
+          color: #999
+        
 
 
 
@@ -75,6 +78,8 @@ body.page-blog
         text-decoration: none
         background-color: transparent
         font-weight: 600
+        &:hover
+          color: $purple
 
     h2
       +adjust-font-size-to(22px)
@@ -135,13 +140,13 @@ body.page-blog
       ol
         li
           +inline-list
-          +adjust-font-size-to(17px)
+          +adjust-font-size-to(14px)
           +adjust-leading-to(1)
 
           a
             background-color: $purple
             +border-radius(4px)
-            padding: 6px
+            padding: 4px 6px
             color: $white
             +inline-block
             margin: 0 4px 4px 0
