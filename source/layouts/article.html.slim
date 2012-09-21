@@ -13,8 +13,24 @@ html lang="pt-br"
     section.container
 
       #main
-        h1 == data.page.title
-        == yield
+        article
+          header
+            h1 == data.page.title
+
+          .entry-meta
+            time.entry-date(datetime="#{current_page.date.strftime('%Y-%m-%dT%T+00:00')}" pubdate)
+              == current_page.date.strftime('%e %b %Y')
+            .permalink
+               a href="#{current_page.url}" Permalink
+            .tags
+              h6 Publicado em:
+              ul
+                - current_page.tags.each do |tag|
+                  li
+                     a href="#{tag_path tag}" #{tag}
+
+          .entry-content
+            == yield
 
       == partial 'layouts/sidebar'
 
