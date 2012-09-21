@@ -18,6 +18,8 @@ html lang="pt-br"
             h1 == data.page.title
 
           .entry-meta
+            .author
+              p == data.page.author
             time.entry-date(datetime="#{current_page.date.strftime('%Y-%m-%dT%T+00:00')}" pubdate)
               == current_page.date.strftime('%e %b %Y')
             .permalink
