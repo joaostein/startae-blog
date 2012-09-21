@@ -12,26 +12,44 @@ html lang="pt-br"
     section.container
 
       #main
+        aside#posts-pagination
+          ul.ss-icon
+            li
+              a href="#" title="Artigo anterior" previous
+            li
+              a href="#" title="Próximo artigo" next
+
         article
           header
             h1 == data.page.title
 
+          .entry-content
+            == yield
+            == partial "layouts/share"
+            == partial "layouts/comment"
+
+        aside#post-meta
           .entry-meta
+
             .author Por <a href="#{data.page.author_link}" target="_blank">#{data.page.author}</a>
-            time.entry-date(datetime="#{current_page.date.strftime('%Y-%m-%dT%T+00:00')}" pubdate)
-              == current_page.date.strftime('%e %b %Y')
+
+            time.entry-date(datetime="#{current_page.date.strftime('%Y-%m-%d T%T %Z')}" pubdate)
+              span.ss-icon date
+              span == current_page.date.strftime('%e %b %Y')
+
             .permalink
-               a href="#{current_page.url}" Permalink
-            .tags
-              h6 Publicado em:
-              ul
+              span.ss-icon link
+              span
+                a href="#{current_page.url}" Permalink
+
+            .categories
+              h6.hidden Publicado em:
+              ol
                 - current_page.tags.each do |tag|
                   li
                      a href="#{tag_path tag}" #{tag}
 
-          .entry-content
-            == yield
-            == partial "layouts/comment"
+        
 
       == partial "layouts/sidebar"
 
