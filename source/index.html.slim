@@ -12,7 +12,7 @@ per_page: 10
           == article.title
 
     .entry-meta
-      time.entry-date(datetime="#{article.date.strftime('%Y-%m-%dT%T+00:00')}" pubdate)
+      time.entry-date(datetime="#{article.date.strftime('%Y-%m-%d T%T %Z')}" pubdate)
         == article.date.strftime('%e %b %Y')
       .permalink
          a href="#{article.url}" Permalink

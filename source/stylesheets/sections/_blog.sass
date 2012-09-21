@@ -5,7 +5,6 @@ body.page-blog
   font-weight: 400
 
 
-
   &.section-article
 
     #main
@@ -13,7 +12,7 @@ body.page-blog
       +padding-trailer(2)
       
       aside#posts-pagination
-        +span-columns(2,16)
+        +span-columns(3,16)
         text-align: center
 
         ul
@@ -25,17 +24,29 @@ body.page-blog
             +adjust-leading-to(2)
             width: 50%
 
+            &.next
+              a
+                text-align: left
+                padding-left: 10px
+
+            &.previous
+              a
+                text-align: right
+                padding-right: 20px
+
             a
               text-decoration: none
               color: #c2c2c2
               display: block
 
               &:hover
-                color: $purple            
+                color: $purple
+                
+
 
 
       article
-        +span-columns(11,16)
+        +span-columns(10,16)
 
       aside#post-meta
         +span-columns(3 omega,16)
@@ -95,6 +106,7 @@ body.page-blog
         +padding-trailer(3)
         +adjust-font-size-to(20px)
         +adjust-leading-to(1.5)
+        // text-align: justify
 
 
       .share
@@ -131,8 +143,8 @@ body.page-blog
 
 
     #secondary
-      +span-columns(11,16)
-      +pre(2)
+      +span-columns(10,16)
+      +pre(3)
       +padding-trailer(2)
 
       #recent-posts
@@ -164,6 +176,12 @@ body.page-blog
 
         &:first-of-type
           +padding-leader(0)
+        
+        li
+          a
+            +padding-leader(.5)
+            +padding-trailer(.5)
+
 
     #main
       +span-columns(9 omega,16)
@@ -197,6 +215,7 @@ body.page-blog
 
       ul
         +margin-leader(1)
+
         li
           list-style-type: square
           margin-left: 1.2em
@@ -207,6 +226,9 @@ body.page-blog
         color: $purple
         font-weight: 700
         text-decoration: none
+
+        img
+          color: transparent !important
 
         &:hover
           color: $white
@@ -231,6 +253,7 @@ body.page-blog
 
       video, audio, iframe, img
         +margin-leader(1)
+      
 
 
         
@@ -243,7 +266,7 @@ body.page-blog
         +adjust-font-size-to(36px)
         +adjust-leading-to(1.8)
         +sans-serif("Source Sans Pro")
-        font-weight: 700
+        font-weight: 600
         letter-spacing: -.05em
         color: $black
 
