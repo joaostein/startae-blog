@@ -16,7 +16,6 @@ body.page-blog
         text-align: center
 
         ul
-          +opacity(0)
           padding-top: 5px
 
           li
@@ -42,6 +41,14 @@ body.page-blog
 
               &:hover
                 color: $purple
+              
+              &.disabled
+                +opacity(.5)
+                cursor: default
+
+                &:hover
+                  color: #c2c2c2
+                    
                 
 
 
@@ -340,7 +347,7 @@ body.page-blog
             position: relative
 
             time
-              display: none
+              background
 
             &:hover
               color: $purple

@@ -13,11 +13,21 @@ html lang="pt-br"
 
       #main
         aside#posts-pagination
+        
           ul.ss-icon
             li.previous
-              a href="#" title="Artigo anterior" previous
+              - prev_article = current_article.previous_article
+              - if prev_article
+                a href="#{prev_article.url}" rel="prev" title="Artigo anterior: #{prev_article.title}" previous 
+              - else
+                a.disabled href="#" previous
             li.next
-              a href="#" title="Próximo artigo" next
+              - next_article = current_article.next_article
+              - if next_article
+                a href="#{next_article.url}" rel="next" title="Próximo artigo: #{next_article.title}" next
+              - else
+                a.disabled href="#" next
+                
 
         article
           header
