@@ -48,12 +48,17 @@
       letter-spacing: -.07em
       text-decoration: none
 
-      &:hover
-        color: $link-color
-
       &:active
         +effect-click-down
 
+    .team:hover
+      color: $yellow
+
+    .projects:hover
+      color: $blue
+
+    .blog:hover
+      color: $purple
     ul
       +inline-list
       +adjust-leading-to(2)
