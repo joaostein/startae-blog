@@ -42,8 +42,8 @@ require 'susy'
 #   config.output_style = :compact
 # end
 
-Slim::Engine.set_default_options pretty: true
-Slim::Engine.set_default_options :format => :html5
+# Slim::Engine.set_default_options pretty: true
+# Slim::Engine.set_default_options :format => :html5
 
 ###
 # Page options, layouts, aliases and proxies
