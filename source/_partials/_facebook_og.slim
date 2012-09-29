@@ -1,12 +1,13 @@
+meta property="fb:admins" content="698471633, 588036161, 603613350, 533503309"
+meta property="fb:app_id" content="113175892169129"
+meta property="og:url" content="http://blog.startae.com.br#{{current_page.url}}"
+meta property="og:type" content="article"
+
+
 - if data.page.title
-  meta property="og:title" content="#{data.page.title}"
+  meta property="og:title" content="#{{data.page.title}}"
 - else
   meta property="og:title" content="Startaê Blog"
-
-
-meta property="og:site_name" content="Startaê Blog"
-meta property="og:type" content="blog"
-meta property="og:url" content="http://blog.startae.com.br#{{current_page.url}}"
 
 
 - if data.page.thumb
@@ -16,10 +17,18 @@ meta property="og:url" content="http://blog.startae.com.br#{{current_page.url}}"
 
 
 - if data.page.summary
-  meta property="og:description" content="#{data.page.summary}"
+  meta property="og:description" content="#{{data.page.summary}}"
 - else
   meta property="og:description" content="Pensamentos, novidades, atualizações de produtos, links e tudo o que está acontecendo no Startaê"
 
 
-meta property="fb:admins" content="698471633, 588036161, 603613350, 533503309"
-meta property="fb:app_id" content="113175892169129"
+meta property="og:site_name" content="Startaê Blog"
+
+
+
+
+
+
+
+
+
