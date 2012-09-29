@@ -4,20 +4,21 @@ per_page: 12
 ---
 
 h1 == tagname
-
+br
 - if paginate
   p Pagina #{page_number} de #{num_pages}
+  br
 
   - if prev_page
     p
-      a href="#{prev_page}" Pagina anterior
+      a href="#{{prev_page}}" Pagina anterior
 
 ul
   - page_articles.each_with_index do |article, i|
     li
-      a href="#{article}" == article.title
-      time == article.date.strftime('%b %e')
+      a href="#{{article.url}}" #{{article.title}}
+      time &nbsp; #{article.date.strftime('%b %e')}
 
 - if paginate
   - if next_page
-    a href="#{next_page}" Proxima pagina
+    a href="#{{next_page}}" Proxima pagina

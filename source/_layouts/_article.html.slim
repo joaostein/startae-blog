@@ -7,12 +7,12 @@ html lang="pt-br"
     link rel="icon" type="image/png" href="/images/favicon.png"
     link rel="shortcut icon" href="/images/favicon.ico"
     link rel="alternate" type="application/rss+xml" title="Startaê Blog" href="http://feeds.feedburner.com/startae"
-    == partial "layouts/facebook_og"
+    == partial "_partials/facebook_og"
     == stylesheet_link_tag 'application.css', media: 'all'
 
   body.page-blog.section-article
-    == partial "layouts/facebook_sdk"
-    == partial "layouts/header"
+    == partial "_partials/facebook_sdk"
+    == partial "_partials/header"
 
     section.container
 
@@ -40,8 +40,8 @@ html lang="pt-br"
 
           .entry-content
             == yield
-            == partial "layouts/share"
-            == partial "layouts/comment"
+            == partial "_partials/share"
+            == partial "_partials/comment"
 
         aside#post-meta
           .entry-meta
@@ -66,9 +66,9 @@ html lang="pt-br"
 
         
 
-      == partial "layouts/sidebar"
+      == partial "_partials/sidebar"
 
 
-    == partial "layouts/footer"
+    == partial "_partials/footer"
     / == javascript_include_tag  "all"
-    == partial "layouts/google_analytics"
+    == partial "_partials/google_analytics"

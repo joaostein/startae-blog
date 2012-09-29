@@ -10,21 +10,21 @@ Time.zone = "Brasilia"
 
 activate :blog do |blog|
   # blog.prefix = "blog"
-  blog.permalink = ":year/:month/:title.html"
-  blog.sources = ":year-:month-:day-:title.html"
+  # blog.permalink = ":year/:month/:title.html"
+  # blog.sources = ":year-:month-:day-:title.html"
   blog.taglink = "categoria/:tag.html"
-  blog.layout = "article"
-  blog.summary_separator = /(READMORE)/
-  blog.summary_length = 250
-  blog.year_link = ":year.html"
-  blog.month_link = ":year/:month.html"
-  blog.day_link = ":year/:month/:day.html"
+  blog.layout = "_layouts/_article"
+  # blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 144
+  # blog.year_link = ":year.html"
+  # blog.month_link = ":year/:month.html"
+  # blog.day_link = ":year/:month/:day.html"
   blog.default_extension = ".slim"
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
-  blog.paginate = true
-  blog.per_page = 10
-  blog.page_link = "page/:num"
+  # blog.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/:num"
 end
 
 page "/feed.xml", :layout => false
@@ -41,6 +41,9 @@ require 'susy'
 # compass_config do |config|
 #   config.output_style = :compact
 # end
+
+Slim::Engine.set_default_options pretty: true
+Slim::Engine.set_default_options :format => :html5
 
 ###
 # Page options, layouts, aliases and proxies
@@ -91,7 +94,7 @@ configure :build do
   activate :minify_javascript
   
   # Enable cache buster
-  # activate :cache_buster
+  activate :cache_buster
   
   # Use relative URLs
   # activate :relative_assets
