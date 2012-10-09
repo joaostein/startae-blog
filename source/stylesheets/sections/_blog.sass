@@ -185,6 +185,8 @@ body.page-blog
 
 
   &.section-home
+    p.caption
+      +hidden
 
     #secondary
       +span-columns(4,16)
@@ -279,13 +281,21 @@ body.page-blog
 
       video, audio, iframe, img
         +margin-leader(1)
-        border: 4px solid $white
-        +border-radius(3px)
+        // border: 4px solid $white
+        // +border-radius(3px)
         +box-shadow(rgba($black, .3) 0 0 5px)
 
       .fluid-image
         img
           width: 100%
+      
+      p.caption
+        color: $gray !important
+        font-style: italic
+        +adjust-font-size-to(10px)
+        line-height: 14px !important
+        margin: 0 !important
+        padding: 0 !important
       
       .no-effect
         video, audio, iframe, img
