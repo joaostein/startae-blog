@@ -286,7 +286,9 @@ body.page-blog
         +box-shadow(rgba($black, .3) 0 0 5px)
 
       .fluid-image
+        +pie-clearfix
         img
+          +float-left
           width: 100%
       
       p.caption
@@ -334,6 +336,39 @@ body.page-blog
         font-weight: 600
         letter-spacing: -.05em
         color: $black
+      
+      h3
+        +adjust-font-size-to(20px)
+        +adjust-leading-to(1)
+        +margin-leader(0)
+        +sans-serif("Source Sans Pro")
+        font-weight: 600
+        letter-spacing: -.05em
+        color: $gray
+        text-transform: uppercase
+      
+      dl
+        +margin-leader(.5)
+        +margin-trailer(.5)
+        
+        dt
+          +adjust-font-size-to(19px)
+          +adjust-leading-to(1)
+          +margin-leader(0)
+          +sans-serif("Source Sans Pro")
+          font-weight: 600
+          letter-spacing: -.05em
+          color: $gray
+          text-transform: uppercase
+          padding: 15px 0 5px 0
+        
+        dd
+          border-bottom: 1px solid rgba($gray-light, .4)
+          padding: 0 0 15px 0
+          +adjust-font-size-to(18px)
+          +adjust-leading-to(.9)
+          +sans-serif("Source Sans Pro")
+        
 
       p
         +margin-leader(1.5)
