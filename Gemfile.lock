@@ -134,7 +134,7 @@ PLATFORMS
 DEPENDENCIES
   builder (~> 3.1.4)
   compass (~> 0.12.2)
-  middleman (~> 3.0.9)
+  middleman (~> 3.0.7)
   middleman-blog (~> 3.1.1)
   middleman-livereload (~> 3.0.0)
   oily_png (~> 1.0.2)
