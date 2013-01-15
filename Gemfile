@@ -15,7 +15,7 @@ gem "builder", "~> 3.1.4"
 # Other
 gem "thin", "~> 1.5.0"
 gem "slim", "~> 1.3.6"
-gem "sass", "~> 3.2.5"
+gem "sass", "~> 3.2.2"
 gem "compass", "~> 0.12.2"
 gem "susy", "~> 1.0.5"
 gem "oily_png", "~> 1.0.2"
