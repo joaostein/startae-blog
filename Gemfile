@@ -1,9 +1,9 @@
 source :rubygems
 
 # Middleman Gems
-gem "middleman", "~> 3.0.10.pre.1"
+gem "middleman", "~> 3.0.11"
 gem "middleman-blog", "~> 3.1.1"
-gem "middleman-livereload", "~> 3.0.0"
+gem "middleman-livereload", "~> 3.0.1"
 # gem "middleman-smusher", "~> 3.0.0"
 
 # For Time.zone
