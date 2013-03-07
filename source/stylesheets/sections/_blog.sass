@@ -4,15 +4,20 @@ img, embed, object, video
   max-width: 100%
   height: auto
 
-.read-more-link
-  +inline-block
-  +margin-leader(1)
-
 body.page-blog
   +adjust-font-size-to(18px)
   +adjust-leading-to(1)
   +sans-serif("Enriqueta")
   font-weight: 400
+
+  .read-more-link
+    +inline-block
+    +margin-leader(1)
+    text-transform: uppercase
+    color: $black !important
+    padding: 3px 4px
+    &:hover
+      color: $white !important  
 
   #secondary
     #recent-posts
@@ -24,7 +29,7 @@ body.page-blog
     #main
       +span-columns(16,16)
       +padding-trailer(2)
-      
+
       aside#posts-pagination
         +span-columns(3,16)
         text-align: center
@@ -419,9 +424,6 @@ body.page-blog
             color: $black
             display: block
             position: relative
-
-            time
-              background
 
             &:hover
               color: $purple
