@@ -20,7 +20,10 @@ body.page-blog
       color: $white !important  
 
   #secondary
+    +pie-clearfix
     #recent-posts
+      +pie-clearfix
+      float: none !important
       time
         +hidden
 
@@ -191,6 +194,7 @@ body.page-blog
 
       #categories
         display: none
+        +pie-clearfix
 
 
 
@@ -446,3 +450,20 @@ body.page-blog
             &:hover
               text-decoration: none
               background-color: darken($purple, 15%)
+
+aside#newsletter
+  +padding-leader(2)
+  form
+    +padding-leader(1)
+  input[type=text]
+    font-size: 20px
+    width: 70%
+    +float-left
+  input.button
+    +float-right
+    width: 18%
+    margin-top: 3px
+  body.section-home &
+    input[type=text], input.button
+      width: 100%
+      float: none

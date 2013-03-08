@@ -23,3 +23,11 @@
   /     - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
   /       li
   /         a href="#{blog_year_path year}" #{year} #{articles.size}
+  aside#newsletter
+    h2 Newsletter Startaê
+    h3 Assine a nossa newsletter para receber artigos, novidades e ofertas.
+    form action="http://startae.createsend.com/t/j/s/dkgkj/" method="post" id="subForm"
+      div
+        label.hidden for="dkgkj-dkgkj" Email:
+        input type="text" name="cm-dkgkj-dkgkj" id="dkgkj-dkgkj" placeholder="Digite seu email..."
+        input.button.primary.medium type="submit" value="Assinar"
