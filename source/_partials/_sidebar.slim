@@ -15,7 +15,7 @@
     ol
       - blog.tags.each do |tag, articles|
         li
-          a href="#{{tag_path tag}}" #{tag} (#{articles.size})
+          a href="#{{tag_path tag}}" #{tag} <span>(#{articles.size})</span>
 
   / aside
   /   h2 Por Ano
