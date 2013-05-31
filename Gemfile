@@ -14,7 +14,7 @@ gem 'tzinfo', '~> 0.3.37'
 gem 'builder', '~> 3.2.0'
 
 # Other
-gem 'thin', '~> 1.5.1'
+gem 'thin', '~> 1.5.0'
 gem 'slim', '~> 1.3.9'
 gem 'sass', '~> 3.2.9'
 gem 'compass', '~> 0.12.2'
