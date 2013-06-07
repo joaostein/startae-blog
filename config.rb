@@ -72,7 +72,7 @@ require 'susy'
 ###
 
 # Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -81,12 +81,18 @@ require 'susy'
 #   end
 # end
 
+
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
+
 # Build-specific configuration
 configure :build do
+
+  # Activate gzip
+  activate :gzip
+
   # For example, change the Compass output style for deployment
   activate :minify_css
 
