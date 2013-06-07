@@ -18,21 +18,41 @@ html lang="pt-br"
 
       #main
         aside#posts-pagination
-        
-          ul.ss-icon
-            li.previous
-              - prev_article = current_article.previous_article
-              - if prev_article
-              a href="#{{prev_article.url}}" rel="prev" title="Artigo anterior: #{prev_article.title}" previous 
-              - else
-                a.disabled href="#" previous
-            li.next
-              - next_article = current_article.next_article
-              - if next_article
-              a href="#{{next_article.url}}" rel="next" title="Próximo artigo: #{next_article.title}" next
-              - else
-                a.disabled href="#" next
-                
+
+          / ul.ss-icon
+          /   li.previous
+          /     - prev_article = current_article.previous_article
+          /     - if prev_article
+          /     a href="#{{prev_article.url}}" rel="prev" title="Artigo anterior: #{prev_article.title}" previous 
+          /     - else
+          /       a.disabled href="#" previous
+          /   li.next
+          /     - next_article = current_article.next_article
+          /     - if next_article
+          /     a href="#{{next_article.url}}" rel="next" title="Próximo artigo: #{next_article.title}" next
+          /     - else
+          /       a.disabled href="#" next
+
+          aside#post-meta
+            .entry-meta
+              .author Por <a href="#{{data.page.author_link}}" target="_blank">#{data.page.author}</a>
+
+              time.entry-date(datetime="#{current_page.date.strftime('%Y-%m-%d T%T %Z')}" pubdate)
+                span.ss-icon date
+                span == current_page.date.strftime('%e %b %Y')
+
+              / .permalink
+              /   span.ss-icon link
+              /   span
+              /     a href="#{{current_page.url}}" Permalink
+
+              .categories
+                h6.hidden Publicado em:
+                ol
+                  - current_page.tags.each do |tag|
+                    li
+                       a href="#{{tag_path tag}}" #{tag}
+
 
         article
           header
@@ -43,31 +63,7 @@ html lang="pt-br"
             == partial "_partials/share"
             == partial "_partials/comment"
 
-        aside#post-meta
-          .entry-meta
-
-            .author Por <a href="#{{data.page.author_link}}" target="_blank">#{data.page.author}</a>
-
-            time.entry-date(datetime="#{current_page.date.strftime('%Y-%m-%d T%T %Z')}" pubdate)
-              span.ss-icon date
-              span == current_page.date.strftime('%e %b %Y')
-
-            .permalink
-              span.ss-icon link
-              span
-                a href="#{{current_page.url}}" Permalink
-
-            .categories
-              h6.hidden Publicado em:
-              ol
-                - current_page.tags.each do |tag|
-                  li
-                     a href="#{{tag_path tag}}" #{tag}
-
-        
-
       == partial "_partials/sidebar"
-
 
     == partial "_partials/footer"
     / == javascript_include_tag  "all"
