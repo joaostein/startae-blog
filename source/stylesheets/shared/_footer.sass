@@ -1,13 +1,10 @@
-#footer-page-inner
-  +container
-
 #footer-page
   +sans-serif("Source Sans Pro")
   font-weight: 200
   +adjust-font-size-to(22px)
-    
+
   #footer-page-inner
-    +margin-leader(2)
+    +margin-leader(3)
     +padding-leader(1)
     +padding-trailer(1)
     +box-shadow(rgba(#000, .1) 0 -1px 0)
@@ -16,8 +13,9 @@
   // SOCIAL LINKS
   // ------------------------------------
   .social-links
-    +span-columns(5 omega,16)
+    +span-columns(4 omega, $total-columns)
     +pie-clearfix
+    +adjust-leading-to(1.5)
     text-align: right
 
     ul
@@ -40,23 +38,24 @@
   // CONTACT INFO
   // ------------------------------------
   .contact-info
-    +span-columns(11,16)
+    +span-columns(8,$total-columns)
+    +adjust-leading-to(1.5)
+
     address
-      +span-columns(6,11)
+      +span-columns(4,8)
       color: #6649b8
-      span[itemprop="name"]
+
+      span[itemprop="name"], span[itemprop="telephone"], a[itemprop="url"], span[itemprop="addressCountry"]
         +hidden
-      span[itemprop="street-address"]
+
+      span[itemprop="streetAddress"]
         display: block
-      span[itemprop="tel"]
-        +hidden
-      a[itemprop="url"]
-        +hidden
+
       a
         color: #6649b8
 
     .contact
-      +span-columns(5 omega,11)
+      +span-columns(4 omega,8)
       color: #fd4775
       text-align: center
       a
@@ -68,7 +67,7 @@
   .copyright
     +margin-leader(4)
     +margin-trailer(1)
-    +span-columns(16,16)
+    +span-columns(12,$total-columns)
     +adjust-font-size-to(14px)
     +adjust-leading-to(1)
     text-align: center

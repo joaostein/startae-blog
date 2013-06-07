@@ -17,7 +17,7 @@ body.page-blog
     color: $black !important
     padding: 3px 4px
     &:hover
-      color: $white !important  
+      color: $white !important
 
   #secondary
     +pie-clearfix
@@ -30,12 +30,12 @@ body.page-blog
   &.section-article
 
     #main
-      +span-columns(16,16)
       +padding-trailer(2)
 
       aside#posts-pagination
-        +span-columns(3,16)
-        text-align: center
+        +span-columns(2,$total-columns)
+        +pre(1)
+        text-align: right
 
         ul
           padding-top: 5px
@@ -63,23 +63,19 @@ body.page-blog
 
               &:hover
                 color: $purple
-              
+
               &.disabled
                 +opacity(.4)
                 cursor: default
 
                 &:hover
                   color: #c2c2c2
-                    
-                
-
 
 
       article
-        +span-columns(10,16)
+        +span-columns(7,$total-columns)
 
       aside#post-meta
-        +span-columns(3 omega,16)
         +adjust-font-size-to(15px)
         +adjust-leading-to(1)
         +sans-serif("Source Sans Pro")
@@ -87,7 +83,7 @@ body.page-blog
         letter-spacing: -.05em
         color: rgba($black, .7)
         padding-top: 5px
-        
+
         .ss-icon
           font-size: 12px
           color: rgba($black, .3)
@@ -115,28 +111,26 @@ body.page-blog
           ol
             li
               +inline-list
-              +adjust-font-size-to(14px)
+              +adjust-font-size-to(12px)
               +adjust-leading-to(1)
 
               a
                 background-color: $purple
-                +border-radius(4px)
-                padding: 3px 5px
+                border-radius: 4px
+                padding: 2px 3px
                 color: $white
                 +inline-block
                 margin: 0 4px 4px 0
-                font-weight: 600
+                font-weight: 400
 
                 &:hover
                   text-decoration: none
                   background-color: darken($purple, 15%)
-        
+
       .entry-content
-        border-bottom: 1px solid rgba(#000, .1)
         +padding-trailer(3)
         +adjust-font-size-to(20px)
         +adjust-leading-to(1.5)
-        // text-align: justify
 
       .share
         +pie-clearfix
@@ -149,8 +143,6 @@ body.page-blog
         .facebook
           padding-left: 20px
           padding-top: 2px
-        
-
 
       .blog-feedback
         background-color: rgba(#333, .05)
@@ -176,12 +168,12 @@ body.page-blog
 
 
     #secondary
-      +span-columns(10,16)
+      +span-columns(7,$total-columns)
       +pre(3)
       +padding-trailer(2)
 
       #recent-posts
-        +span-columns(10,10)
+        +span-columns(8,8)
 
         li
           border-bottom: 1px solid #ddd
@@ -196,15 +188,12 @@ body.page-blog
         display: none
         +pie-clearfix
 
-
-
-
   &.section-home
     p.caption
       +hidden
 
     #secondary
-      +span-columns(4,16)
+      +span-columns(3,$total-columns)
       +pre(1)
 
       aside
@@ -212,7 +201,7 @@ body.page-blog
 
         &:first-of-type
           +padding-leader(0)
-        
+
         li
           a
             +padding-leader(.5)
@@ -229,10 +218,10 @@ body.page-blog
         border-bottom: 1px solid rgba(#000, .1)
         +margin-leader(3)
         +padding-trailer(3)
-        
+
         &:first-of-type
           +margin-leader(0)
-      
+
         .entry-meta
           position: absolute
           top: 0
@@ -296,26 +285,22 @@ body.page-blog
 
       video, audio, iframe, img
         +margin-leader(1)
-        // border: 4px solid $white
-        // +border-radius(3px)
         +box-shadow(rgba($black, .3) 0 0 5px)
 
       .fluid-image
         +pie-clearfix
-        
+
         img
-          // +float-left
           max-width: 100%
-      
+
       p.caption
         color: $gray !important
         font-style: italic
-        +adjust-font-size-to(11px)
-        line-height: 14px !important
-        margin: 0 !important
+        font-size: 15px !important
+        line-height: 19px !important
+        margin: .5em 0 0 0 !important
         padding: 0 0 0 0 !important
-        
-      
+
       .no-effect
         video, audio, iframe, img
           +box-shadow(none)
@@ -323,25 +308,23 @@ body.page-blog
           +border-radius(0)
 
 
-        
   section.container
-    +container
     +padding-leader(2)
-    
+
     #main
       h1
-        +adjust-font-size-to(36px)
-        +adjust-leading-to(1.8)
+        +adjust-font-size-to(48px)
+        +adjust-leading-to(2.7)
         +sans-serif("Source Sans Pro")
-        font-weight: 600
+        font-weight: 700
         letter-spacing: -.05em
-        color: $black
+        color: #333
 
         a
-          color: $black
+          color: #333
           text-decoration: none
           background-color: transparent
-          font-weight: 600
+          font-weight: 700
           &:hover
             color: $purple
 
@@ -353,7 +336,7 @@ body.page-blog
         font-weight: 600
         letter-spacing: -.05em
         color: $black
-      
+
       h3
         +adjust-font-size-to(20px)
         +adjust-leading-to(1)
@@ -363,11 +346,11 @@ body.page-blog
         letter-spacing: -.05em
         color: $gray
         text-transform: uppercase
-      
+
       dl
         +margin-leader(.5)
         +margin-trailer(.5)
-        
+
         dt
           +adjust-font-size-to(19px)
           +adjust-leading-to(1)
@@ -378,21 +361,21 @@ body.page-blog
           color: $gray
           text-transform: uppercase
           padding: 15px 0 5px 0
-        
+
         dd
           border-bottom: 1px solid rgba($gray-light, .4)
           padding: 0 0 15px 0
           +adjust-font-size-to(18px)
           +adjust-leading-to(.9)
           +sans-serif("Source Sans Pro")
-        
 
       p
-        +margin-leader(1.5)
-        +adjust-leading-to(1.2)
-        color: #333
+        +margin-leader(2)
+        +adjust-leading-to(1.8)
+        +adjust-font-size-to(21px)
+        color: #222
         letter-spacing: -.03em
-    
+
       b
         font-weight: 700
 
@@ -409,7 +392,7 @@ body.page-blog
         letter-spacing: -.05em
         color: $black
         text-transform: uppercase
-    
+
       ol
         +margin-leader(1)
 
@@ -436,17 +419,18 @@ body.page-blog
       ol
         li
           +inline-list
-          +adjust-font-size-to(14px)
+          +adjust-font-size-to(12px)
           +adjust-leading-to(1)
 
           a
             background-color: $purple
-            +border-radius(4px)
-            padding: 4px 6px
+            border-radius: 4px
+            padding: 2px 3px
             color: $white
             +inline-block
             margin: 0 4px 4px 0
-
+            span
+              color: rgba($white,.3)
             &:hover
               text-decoration: none
               background-color: darken($purple, 15%)

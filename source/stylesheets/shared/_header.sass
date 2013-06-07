@@ -1,51 +1,41 @@
-#workshop-nav
-  background-color: $gray-darker
-  +box-shadow(inset 0 -2px 6px $black)
-  color: $gray-lighter
-  text-align: center
-  +sans-serif("Source Sans Pro")
-  +adjust-font-size-to(15px)
-  +adjust-leading-to(1)
-  padding: 8px 0
-  letter-spacing: .06em
-  
-  p
-    font-weight: 300
-    line-height: 26px
-  
-  #workshop-nav-inner
-    +container
-    a
-      color: #00d8b7
-      font-weight: 600
+body.section-team
+  #header-page-inner .team
+    color: $yellow
 
+body.section-projects
+  #header-page-inner .projects
+    color: $blue
 
+body.section-workshops
+  background-color: $white
 
-#header-page-inner nav.nav-page .blog
-  color: $purple
+  #header-page-inner .workshops
+    color: #00d8b7
 
-#header-page-inner
-  +container
+  #header-page
+    background-color: $gray-lighter
+    +box-shadow(inset 0 -1px 0 rgba(#eee, 1))
 
 #header-page, #header-page-inner
   +pie-clearfix
-  
+
 #header-page
-  +min-height(100px)
+  +min-height(135px)
   border-color: #97dce3
   position: relative
-  
+
 #header-page-inner
+  position: relative
+
   .logo-page
     width: 140px
     height: 45px
     +hide-text
     display: block
     position: absolute
-    top: 34px
+    top: 40px
     background: url("/images/startae-logo.png") 0 0 no-repeat
     +background-size(contain)
-    +opacity(.85)
 
     a
       display: block
@@ -54,9 +44,12 @@
 
       &:hover
         +opaque
-      
 
   nav.nav-page
+    position: absolute
+    right: 0
+    top: 5px
+
     +span-columns(12 ,16)
     +push(4)
     +padding-leader(2)
@@ -77,17 +70,19 @@
       &:active
         +effect-click-down
 
+
     .team:hover
       color: $yellow
 
     .projects:hover
       color: $blue
-    
+
     .workshops:hover
       color: #00d8b7
 
     .blog:hover
       color: $purple
+
     ul
       +inline-list
       +adjust-leading-to(2)
@@ -97,6 +92,6 @@
 
         &:last-of-type
           margin-right: 0
-        
+
         span
           display: none
