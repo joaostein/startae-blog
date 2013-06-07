@@ -4,12 +4,13 @@ source 'https://rubygems.org'
 gem 'middleman', '~> 3.0.14'
 gem 'middleman-blog', '~> 3.2.0'
 gem 'middleman-livereload', '~> 3.1.0'
-gem "nokogiri", "~> 1.5.9"
-gem "middleman-sprockets", "~> 3.1.1"
-gem "rake", "~> 10.0.4"
+gem 'nokogiri', '~> 1.5.9'
+gem 'middleman-sprockets', '~> 3.1.1'
+gem 'rake', '~> 10.0.4'
 gem 'unicorn', '~> 4.6.2'
-gem "rack-contrib", "~> 1.1.0"
-gem "rack-cache", "~> 1.2"
+gem 'rack-contrib', '~> 1.1.0'
+gem 'rack-cache', '~> 1.2'
+gem 'thin', '~> 1.5.1'
 
 # For Time.zone
 gem 'tzinfo', '~> 0.3.37'
