@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
 # Middleman Gems
-gem 'middleman', '~> 3.0.14'
+gem 'middleman', '~> 3.1.2'
 gem 'middleman-blog', '~> 3.2.0'
 gem 'middleman-livereload', '~> 3.1.0'
 gem 'nokogiri', '~> 1.5.9'
-gem 'middleman-sprockets', '~> 3.1.1'
+gem 'middleman-sprockets', '~> 3.1.2'
 gem 'rake', '~> 10.0.4'
 gem 'unicorn', '~> 4.6.2'
 gem 'rack-contrib', '~> 1.1.0'
