@@ -29,7 +29,7 @@ end
 
 page "/feed.xml", :layout => false
 
-### 
+###
 # Compass
 ###
 
@@ -50,13 +50,16 @@ require 'susy'
 ###
 
 # Per-page layout changes:
-# 
+
+page "/sitemap.xml", :layout => false
+
+#
 # With no layout
 # page "/path/to/file.html", :layout => false
-# 
+#
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
-# 
+#
 # A path which all have the same layout
 # with_layout :admin do
 #   page "/admin/*"
@@ -80,6 +83,7 @@ activate :automatic_image_sizes
 #     "Helping"
 #   end
 # end
+
 
 
 set :css_dir, 'stylesheets'
