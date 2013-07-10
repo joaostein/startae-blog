@@ -1,0 +1,283 @@
+// BLOG INDEX
+body.page-blog.section-home
+  #secondary
+    +span-columns(3, $cols-1140)
+  #main
+    +span-columns(7 omega, $cols-1140)
+    +squish(1,1)
+
+// BLOG ARTICLE
+body.page-blog.section-article
+  #main #posts-pagination
+    +span-columns(2, $cols-1140)
+
+  #main article
+    +span-columns(8, $cols-1140)
+    +pre(1)
+    .fluid-image
+      img
+        width: 100%
+
+  #secondary
+    +span-columns(9, $cols-1140)
+    +pre(3)
+
+
+// BP960
+// ---------------------------
++at-breakpoint($layout-960)
+  body.page-blog.section-article
+
+    #main #posts-pagination
+      +span-columns(3, $cols-960)
+      +pre(0)
+
+    #main article
+      +span-columns(9, $cols-960)
+      +pre(0)
+      +omega
+
+    #secondary
+      +span-columns(9, $cols-960)
+
+  // INDEX BLOG
+  body.page-blog.section-home
+    #secondary
+      +span-columns(3, $cols-960)
+      +squish(0)
+    #main
+      +span-columns(9, $cols-960)
+      +squish(0)
+      +omega
+      article .entry-meta
+        position: static
+        width: 100%
+
+
+
+// BP768
+// ---------------------------
++at-breakpoint($layout-768)
+  body.page-blog.section-article
+
+    #main #posts-pagination
+      +span-columns(1, $cols-768)
+      +pre(0)
+
+    #main article
+      +span-columns(5, $cols-768)
+      +pre(0)
+      +omega
+
+      h1
+        font-size: 38px
+        line-height: 44px
+
+    #secondary
+      +span-columns(5, $cols-768)
+      +pre(1)
+
+  // INDEX BLOG
+  body.page-blog.section-home
+    #secondary
+      +span-columns(2, $cols-768)
+      +squish(0)
+    #main
+      +span-columns(4, $cols-768)
+      +squish(0)
+      +omega
+      article .entry-meta
+        position: static
+        width: 100%
+        .permalink
+          display: none
+
+
+
++at-breakpoint($layout-480)
+  .share
+    display: none
+  #header-page-inner
+    .logo-page
+      width: 140px
+      left: 50%
+      margin-left: -(140px/2)
+      top: 20px
+    .nav-page
+      +reset-columns
+      +push(0)
+      text-align: center
+      position: static
+      padding: 90px 0 0 0
+      margin: 0
+
+  // INDEX BLOG
+  body.page-blog.section-home
+    #secondary
+      +reset-columns
+    #main
+      +reset-columns
+      article .entry-meta
+        position: static
+        width: 100%
+        .permalink
+          display: none
+    section.container #main h1
+      font-size: 40px
+      line-height: 38px
+
+  body.page-blog.section-article
+
+    #main #posts-pagination
+      +reset-columns
+      text-align: left
+      border-bottom: 1px solid $gray-light
+      padding-bottom: 10px
+      margin-bottom: 15px
+      .author
+        +inline-block
+      time
+        padding-top: 4px
+        +inline-block
+        padding-left: 10px
+      .categories
+        float: right
+        padding: 0
+        margin: -23px 0 0 0
+
+
+    #main article
+      +reset-columns
+
+      h1
+        font-size: 38px
+        line-height: 44px
+
+    #secondary
+      +reset-columns
+      +pre(0)
+
+  #footer-page
+    .social-links, .contact-info, .copyright
+      +reset-columns
+      +clearfix
+      margin: 0
+      padding: 0
+    .contact-info
+      padding-top: 1em
+    .social-links
+      text-align: left
+      ul
+        float: none
+        li
+          +inline-block
+        li.facebook
+          float: left
+        li.twitter
+          float: right
+
+
+
+
++at-breakpoint($layout-320)
+  .notice-header
+    font-size: 12px
+    line-height: 14px
+    padding: 8px 0
+    p
+      font-weight: 500
+
+  .share
+    display: none
+
+  #header-page-inner
+    .logo-page
+      width: 140px
+      left: 50%
+      margin-left: -(140px/2)
+      top: 20px
+    .nav-page
+      +reset-columns
+      +push(0)
+      text-align: center
+      position: static
+      padding: 90px 0 0 0
+      margin: 0
+      font-size: 23px
+      ul
+        li
+          margin-right: 1em
+
+  // INDEX BLOG
+  body.page-blog.section-home
+    #secondary
+      +reset-columns
+    #main
+      +reset-columns
+      article .entry-meta
+        position: static
+        width: 100%
+        .permalink
+          display: none
+    section.container #main h1
+      font-size: 30px
+      line-height: 31px
+
+  body.page-blog.section-article
+
+    #main #posts-pagination
+      +reset-columns
+      text-align: left
+      border-bottom: 1px solid $gray-light
+      padding-bottom: 10px
+      margin-bottom: 15px
+      .author
+        +inline-block
+      time
+        padding-top: 4px
+        +inline-block
+        padding-left: 10px
+        float: right
+      .categories
+        // float: right
+        padding: 6px 0 0 0
+        margin: 0
+
+
+    #main article
+      +reset-columns
+
+      h1
+        font-size: 28px
+        line-height: 32px
+
+      h2
+        font-size: 21px
+        line-height: 24px
+      p
+        font-size: 19px
+        line-height: 23px
+
+    #secondary
+      +reset-columns
+      +pre(0)
+
+  #footer-page
+    display: none
+    // .social-links, .contact-info, .copyright
+    //   +reset-columns
+    //   +clearfix
+    //   margin: 0
+    //   padding: 0
+    // .contact-info
+    //   padding-top: 1em
+    // .social-links
+    //   text-align: left
+    //   ul
+    //     float: none
+    //     li
+    //       +inline-block
+    //     li.facebook
+    //       float: left
+    //     li.twitter
+    //       float: right

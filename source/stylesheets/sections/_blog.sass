@@ -10,6 +10,9 @@ body.page-blog
   +sans-serif("Enriqueta")
   font-weight: 400
 
+  #main
+    +pie-clearfix
+
   .read-more-link
     +inline-block
     +margin-leader(1)
@@ -27,14 +30,15 @@ body.page-blog
       time
         +hidden
 
+
+// BLOG ARTICLE
+body.page-blog
   &.section-article
 
     #main
       +padding-trailer(2)
 
-      aside#posts-pagination
-        +span-columns(2,$total-columns)
-        +pre(1)
+      #posts-pagination
         text-align: right
 
         ul
@@ -71,11 +75,7 @@ body.page-blog
                 &:hover
                   color: #c2c2c2
 
-
-      article
-        +span-columns(7,$total-columns)
-
-      aside#post-meta
+      #post-meta
         +adjust-font-size-to(15px)
         +adjust-leading-to(1)
         +sans-serif("Source Sans Pro")
@@ -168,12 +168,9 @@ body.page-blog
 
 
     #secondary
-      +span-columns(7,$total-columns)
-      +pre(3)
       +padding-trailer(2)
 
       #recent-posts
-        +span-columns(8,8)
 
         li
           border-bottom: 1px solid #ddd
@@ -188,14 +185,15 @@ body.page-blog
         display: none
         +pie-clearfix
 
+
+
+// BLOG INDEX
+body.page-blog
   &.section-home
     p.caption
       +hidden
 
     #secondary
-      +span-columns(3,$total-columns)
-      +pre(1)
-
       aside
         +padding-leader(2)
 
@@ -209,9 +207,8 @@ body.page-blog
 
 
     #main
-      +span-columns(9 omega,16)
-      +post(1)
       +padding-trailer(2)
+      +pie-clearfix
 
       article
         position: relative
@@ -223,13 +220,14 @@ body.page-blog
           +margin-leader(0)
 
         .entry-meta
-          position: absolute
-          top: 0
-          right: -88px
+          // position: absolute
+          // top: 0
+          // right: -88px
           color: #999
-          +adjust-font-size-to(13px)
+          +adjust-font-size-to(16px)
           +adjust-leading-to(1)
-          width: 80px
+          // width: 80px
+          padding-top: 6px
 
           a
             color: #999
@@ -313,8 +311,8 @@ body.page-blog
 
     #main
       h1
-        +adjust-font-size-to(48px)
-        +adjust-leading-to(2.7)
+        +adjust-font-size-to(46px)
+        +adjust-leading-to(2.3)
         +sans-serif("Source Sans Pro")
         font-weight: 700
         letter-spacing: -.05em
@@ -415,7 +413,7 @@ body.page-blog
             &:hover
               color: $purple
 
-    aside#categories
+    #categories
       ol
         li
           +inline-list
@@ -435,7 +433,7 @@ body.page-blog
               text-decoration: none
               background-color: darken($purple, 15%)
 
-aside#newsletter
+#newsletter
   +padding-leader(2)
   form
     +padding-leader(1)

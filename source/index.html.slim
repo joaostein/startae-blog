@@ -16,8 +16,8 @@ summary: 'Pensamentos, novidades, atualizações de produtos, links e tudo o que
     .entry-meta
       time.entry-date(datetime="#{article.date.strftime('%Y-%m-%d T%T %Z')}" pubdate)
         == article.date.strftime('%e %b %Y')
-      .permalink
-         a href="#{{article.url}}" Permalink
+      / .permalink
+      /    a href="#{{article.url}}" Permalink
 
     .entry-content
       == article.summary
