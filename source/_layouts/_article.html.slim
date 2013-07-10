@@ -3,7 +3,14 @@ html lang="pt-br"
   head
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
-    title == data.page.title || "Blog Startaê"
+    - if data.page.title
+      title == data.page.title
+    - else
+      title "Blog Startaê"
+    - if data.page.summary
+      meta name="description" content="#{{data.page.summary}}"
+    - else
+      meta name="description" content="Pensamentos, novidades, atualizações de produtos, links e tudo o que está acontecendo no Startaê"
     link rel="icon" type="image/png" href="/images/favicon.png"
     link rel="shortcut icon" href="/images/favicon.ico"
     link rel="alternate" type="application/rss+xml" title="Startaê Blog" href="http://feeds.feedburner.com/startae"
@@ -23,7 +30,7 @@ html lang="pt-br"
           /   li.previous
           /     - prev_article = current_article.previous_article
           /     - if prev_article
-          /     a href="#{{prev_article.url}}" rel="prev" title="Artigo anterior: #{prev_article.title}" previous 
+          /     a href="#{{prev_article.url}}" rel="prev" title="Artigo anterior: #{prev_article.title}" previous
           /     - else
           /       a.disabled href="#" previous
           /   li.next
