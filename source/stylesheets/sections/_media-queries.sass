@@ -115,13 +115,23 @@ body.page-blog.section-article
   body.page-blog.section-home
     #secondary
       +reset-columns
+
     #main
       +reset-columns
+      +squish(0)
       article .entry-meta
         position: static
         width: 100%
         .permalink
           display: none
+      a.read-more-link
+        display: block
+        background-color: lighten($gray-light, 10%)
+        color: $gray !important
+        border-radius: 3px
+        text-align: center
+        padding: 10px 4px
+
     section.container #main h1
       font-size: 40px
       line-height: 38px
@@ -145,9 +155,9 @@ body.page-blog.section-article
         padding: 0
         margin: -23px 0 0 0
 
-
     #main article
       +reset-columns
+      +squish(0)
 
       h1
         font-size: 38px
@@ -214,19 +224,37 @@ body.page-blog.section-article
       +reset-columns
     #main
       +reset-columns
+      +squish(0)
+      article
+        margin-top: 30px
+        padding-bottom: 30px
+
       article .entry-meta
         position: static
         width: 100%
         .permalink
           display: none
-    section.container #main h1
-      font-size: 30px
-      line-height: 31px
+    section.container #main
+      h1
+        font-size: 22px
+        line-height: 24px
+      p
+        font-size: 18px
+        line-height: 24px
+        margin-top: 10px
+      a.read-more-link
+        display: block
+        background-color: lighten($gray-light, 10%)
+        color: $gray !important
+        border-radius: 3px
+        text-align: center
+        padding: 10px 4px
 
   body.page-blog.section-article
 
     #main #posts-pagination
       +reset-columns
+      +squish(0)
       text-align: left
       border-bottom: 1px solid $gray-light
       padding-bottom: 10px
@@ -239,13 +267,13 @@ body.page-blog.section-article
         padding-left: 10px
         float: right
       .categories
-        // float: right
         padding: 6px 0 0 0
         margin: 0
 
 
     #main article
       +reset-columns
+      +squish(0)
 
       h1
         font-size: 28px
