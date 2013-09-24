@@ -52,18 +52,12 @@ html lang="pt-br"
                 span.ss-icon date
                 span == current_page.date.strftime('%e %b %Y')
 
-              / .permalink
-              /   span.ss-icon link
-              /   span
-              /     a href="#{{current_page.url}}" Permalink
-
               .categories
                 h6.hidden Publicado em:
                 ol
                   - current_page.tags.each do |tag|
                     li
                        a href="#{{tag_path tag}}" #{tag}
-
 
         article
           header
@@ -77,5 +71,6 @@ html lang="pt-br"
       == partial "_partials/sidebar"
 
     == partial "_partials/footer"
-    / == javascript_include_tag  "all"
+    == javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"
+    == javascript_include_tag  "application"
     == partial "_partials/google_analytics"
