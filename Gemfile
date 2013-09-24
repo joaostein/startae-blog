@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Middleman Gems
-gem 'middleman',            '~> 3.1.5'
+gem 'middleman',            '~> 3.1.4'
 gem 'middleman-blog',       '~> 3.3.0'
 gem 'middleman-livereload', '~> 3.1.0'
 gem 'nokogiri',             '~> 1.5.9'
