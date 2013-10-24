@@ -5,6 +5,7 @@ ruby '2.0.0'
 gem 'middleman',            '~> 3.1.6'
 gem 'middleman-blog',       '~> 3.3.0'
 gem 'middleman-livereload', '~> 3.1.0'
+gem 'thin',                 '~> 1.5.1'
 
 # Nokogiri is required for blog post summaries
 gem 'nokogiri',             '~> 1.5.9'
