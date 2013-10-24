@@ -3,7 +3,7 @@
   aside#recent-posts
     h2 Posts Recentes
     ol
-      - blog.articles[0...10].each do |article|
+      - blog.articles[0...40].each do |article|
         li
           a href="#{{article.url}}"
             == article.title
