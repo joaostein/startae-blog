@@ -6,6 +6,7 @@ gem 'middleman',            '~> 3.1.6'
 gem 'middleman-blog',       '~> 3.3.0'
 gem 'middleman-livereload', '~> 3.1.0'
 gem 'nokogiri',             '~> 1.6.0'
+gem 'unicorn',              '~> 4.6.2'
 
 # For Time.zone
 gem 'tzinfo',               '~> 0.3.0'
