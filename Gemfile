@@ -5,8 +5,7 @@ gem 'unicorn', '~> 4.7.0'
 
 # Middleman Gems
 gem 'middleman', '~> 3.2.0'
-gem 'middleman-blog',       '~> 3.4.1'
-gem 'middleman-livereload', '~> 3.1.0'
+gem 'middleman-blog', '~> 3.4.1'
 
 # Nokogiri is required for blog post summaries
 gem 'nokogiri',             '~> 1.5.9'
@@ -24,4 +23,6 @@ gem 'compass',              '~> 0.12.2'
 gem 'susy',                 '~> 1.0.9'
 gem 'toolkit',              '~> 1.3.8'
 
-
+group :development do
+  gem 'middleman-livereload', '~> 3.1.0'
+end
