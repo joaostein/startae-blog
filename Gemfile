@@ -3,8 +3,8 @@ ruby '2.0.0'
 
 gem 'unicorn', '~> 4.7.0'
 gem 'thin', '~> 1.6.1'
-gem 'middleman', '~> 3.2.0'
-gem 'middleman-blog', '~> 3.4.1'
+gem 'middleman', '~> 3.2.1'
+gem 'middleman-blog', '~> 3.5.1'
 
 # Nokogiri is required for blog post summaries
 gem 'nokogiri',             '~> 1.5.9'
