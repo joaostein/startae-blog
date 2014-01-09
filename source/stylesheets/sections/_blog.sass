@@ -6,19 +6,31 @@ body.page-blog
 
   .entry-content
     .teaser-aprenda
-      border-top: 1px solid #ddd
       margin-top: 30px
       margin-bottom: 40px
-      background-color: #fff
+
+
+      a
+        display: block
+        box-shadow: inset 0 0 0 1px #ddd
+        background-color: #fff
+
+        &:hover
+          background-color: #fff
+          text-decoration: underline
+          color: #000
 
       p
-        padding: 20px 20px 0 20px !important
+        padding: 0 !important
         margin: 0 !important
-        font-size: 18px !important
+        font-size: 17px !important
         text-align: center
+        font-weight: 500 !important
+        +sans-serif
 
       img
         width: 100%
+        margin: 0
 
 
 // Fluid medias
@@ -283,6 +295,7 @@ body.page-blog
       blockquote
         font-style: italic
         padding-left: 20px
+        padding-right: 20px
         padding-top: 40px
         padding-bottom: 10px
         font-size: 32px
