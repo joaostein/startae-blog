@@ -14,8 +14,8 @@ activate :blog do |blog|
   # blog.sources = ":year-:month-:day-:title.html"
   blog.taglink = "categoria/:tag.html"
   blog.layout = "_layouts/_article"
-  blog.summary_separator = /READMORE/
-  blog.summary_length = 256
+  blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
+  # blog.summary_length = 256
   blog.year_link = ":year.html"
   blog.month_link = ":year/:month.html"
   blog.day_link = ":year/:month/:day.html"

@@ -20,7 +20,8 @@ summary: 'Blog sobre design, tecnologia e negócios.'
       /    a href="#{{article.url}}" Permalink
 
     .entry-content
-      == article.summary
+      / == article.summary
+      == article.summary(250, '...')
       a.read-more-link href="#{{article.url}}" Continuar lendo...
 
 
