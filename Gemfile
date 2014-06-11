@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'unicorn', '~> 4.8.3'
+gem 'thin', '~> 1.6.2'
 gem 'middleman', :github => "middleman/middleman", :branch => "v3-stable"
 gem 'middleman-blog', '~> 3.5.3'
 
